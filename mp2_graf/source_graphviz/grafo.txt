@@ -1,0 +1,105 @@
+graph 0.219 27.528 27.403
+node node1  9.750 27.167 0.471 0.471 0 filled circle gray lightgrey
+node node2  9.750 25.889 0.471 0.471 3 filled circle gray lightgrey
+node node3  8.028 24.528 0.620 0.620 10 filled circle gray lightgrey
+node node4  5.347 23.167 0.471 0.471 3 filled circle gray lightgrey
+node node6  13.139 24.528 0.620 0.620 12 filled circle gray lightgrey
+node node9  15.778 23.167 0.620 0.620 15 filled circle gray lightgrey
+node node19  14.222 21.806 0.620 0.620 26 filled circle gray lightgrey
+node node18  15.944 19.083 0.620 0.620 28 filled circle gray lightgrey
+node node32  15.944 17.722 0.620 0.620 28 filled circle gray lightgrey
+node node21  15.125 16.361 0.620 0.620 29 filled circle gray lightgrey
+node node25  15.125 15.000 0.620 0.620 38 filled circle gray lightgrey
+node node7  9.597 23.167 0.620 0.620 18 filled circle gray lightgrey
+node node5  13.903 25.889 0.620 0.620 11 filled circle gray lightgrey
+node node8  4.444 21.806 0.620 0.620 54 filled circle gray lightgrey
+node node13  4.139 20.444 0.620 0.620 55 filled circle gray lightgrey
+node node14  0.472 19.083 0.620 0.620 15 filled circle gray lightgrey
+node node10  17.625 21.806 0.620 0.620 24 filled circle gray lightgrey
+node node11  10.500 20.444 0.620 0.620 19 filled circle gray lightgrey
+node node12  7.833 19.083 0.620 0.620 22 filled circle gray lightgrey
+node node16  11.028 16.361 0.620 0.620 24 filled circle gray lightgrey
+node node34  15.125 13.639 0.620 0.620 41 filled circle gray lightgrey
+node node15  7.875 17.722 0.620 0.620 50 filled circle gray lightgrey
+node node17  20.125 20.444 0.620 0.620 27 filled circle gray lightgrey
+node node33  19.333 16.361 0.620 0.620 29 filled circle gray lightgrey
+node node20  16.264 20.444 0.620 0.620 27 filled circle gray lightgrey
+node node22  21.917 15.000 0.620 0.620 31 filled circle gray lightgrey
+node node23  25.181 13.639 0.620 0.620 31 filled circle gray lightgrey
+node node24  21.917 13.639 0.620 0.620 32 filled circle gray lightgrey
+node node26  17.958 13.639 0.620 0.620 33 filled circle gray lightgrey
+node node27  12.167 13.639 0.620 0.620 35 filled circle gray lightgrey
+node node28  12.167 12.278 0.620 0.620 35 filled circle gray lightgrey
+node node29  9.208 12.278 0.620 0.620 37 filled circle gray lightgrey
+node node31  8.944 10.917 0.620 0.620 37 filled circle gray lightgrey
+node node30  11.708 10.917 0.620 0.620 38 filled circle gray lightgrey
+node node35  23.972 12.278 0.620 0.620 40 filled circle gray lightgrey
+node node37  18.583 12.278 0.620 0.620 41 filled circle gray lightgrey
+node node36  15.125 12.278 0.620 0.620 44 filled circle gray lightgrey
+node node41  17.306 10.917 0.620 0.620 43 filled circle gray lightgrey
+node node42  17.306 9.556 0.620 0.620 44 filled circle gray lightgrey
+node node38  13.056 10.917 0.620 0.620 49 filled circle gray lightgrey
+node node47  8.653 8.194 0.620 0.620 52 filled circle gray lightgrey
+node node40  5.028 6.833 0.620 0.620 56 filled circle gray lightgrey
+node node43  5.028 5.472 0.620 0.620 53 filled circle gray lightgrey
+node node46  1.639 4.111 0.620 0.620 49 filled circle gray lightgrey
+node node39  12.403 9.556 0.620 0.620 51 filled circle gray lightgrey
+node node45  5.028 4.111 0.620 0.620 53 filled circle gray lightgrey
+node node44  7.014 4.111 0.620 0.620 54 filled circle gray lightgrey
+edge node1 node2 4 9.750 26.931 9.750 26.694 9.750 26.361 9.750 26.125 "Rua de Sao Vicente" 10.528 26.569 solid black
+edge node2 node3 4 9.556 25.736 9.236 25.486 8.611 25.000 8.264 24.722 "Avenida da Liberdade_0" 10.042 25.208 solid black
+edge node2 node6 4 9.972 25.806 10.569 25.569 12.181 24.917 12.847 24.639 "Rua D. Pedro V" 12.333 25.208 solid black
+edge node3 node4 7 7.736 24.417 7.472 24.306 7.056 24.125 6.708 23.958 6.292 23.736 5.819 23.458 5.556 23.292 "Avenida da Liberdade_1" 7.764 23.847 solid black
+edge node3 node7 4 8.264 24.319 8.569 24.069 9.069 23.625 9.361 23.375 "Avenida Joao XXI" 9.667 23.847 solid black
+edge node6 node9 4 13.417 24.389 13.931 24.125 15.000 23.569 15.500 23.306 "Rua Nova Santa Cruz_0" 15.528 23.847 solid black
+edge node6 node7 4 12.847 24.417 12.181 24.167 10.556 23.542 9.889 23.278 "Avenida Padre Julio Fragata_1" 12.917 23.847 solid black
+edge node9 node19 4 15.542 22.958 15.250 22.708 14.750 22.264 14.458 22.014 "Rua Nova Santa Cruz_1" 16.056 22.486 solid black
+edge node9 node10 7 16.069 23.083 16.347 23.000 16.764 22.833 17.056 22.597 17.222 22.458 17.375 22.250 17.472 22.083 "Rua da Fabrica_0" 17.917 22.486 solid black
+edge node19 node18 7 14.069 21.528 13.903 21.167 13.681 20.556 13.958 20.125 14.319 19.514 15.181 19.236 15.639 19.139 "Rua Nova Santa Cruz_2" 14.889 20.444 solid black
+edge node19 node20 4 14.486 21.639 14.875 21.375 15.611 20.875 16.014 20.611 "Rua Quinta da armada" 16.208 21.125 solid black
+edge node18 node32 4 15.944 18.764 15.944 18.542 15.944 18.250 15.944 18.042 "Rua Nova Santa Cruz_3" 16.875 18.403 solid black
+edge node32 node21 4 15.778 17.458 15.639 17.222 15.431 16.875 15.292 16.625 "Rua Nova Santa Cruz_4" 16.528 17.042 solid black
+edge node32 node33 7 16.236 17.625 16.556 17.514 17.069 17.319 17.528 17.153 18.069 16.931 18.694 16.653 19.056 16.486 "Rua Lusiada" 18.472 17.042 solid black
+edge node21 node25 4 15.125 16.042 15.125 15.819 15.125 15.528 15.125 15.319 "Rua Nova Santa Cruz_5" 16.056 15.681 solid black
+edge node21 node22 4 15.431 16.306 16.542 16.083 20.486 15.292 21.611 15.056 "Rua David Costa_0" 19.736 15.681 solid black
+edge node25 node34 4 15.125 14.681 15.125 14.458 15.125 14.167 15.125 13.958 "Rua Vasco Ferreira" 15.875 14.319 solid black
+edge node25 node26 7 15.431 14.903 15.736 14.806 16.250 14.639 16.681 14.431 17.056 14.236 17.444 13.986 17.708 13.819 "Rua Ulisses da Monhe Costa" 18.125 14.319 solid black
+edge node25 node27 7 14.833 14.917 14.486 14.819 13.931 14.639 13.472 14.431 13.097 14.250 12.681 13.986 12.417 13.819 "Rua Estrada Nova_0" 14.347 14.319 solid black
+edge node7 node8 7 9.292 23.097 8.833 23.000 7.917 22.792 7.153 22.597 6.278 22.361 5.236 22.056 4.736 21.903 "Rua Frei Bartolomeu dos Martires" 8.667 22.486 solid black
+edge node7 node11 7 9.750 22.889 9.792 22.792 9.833 22.694 9.875 22.597 10.125 21.958 10.333 21.167 10.431 20.750 "Avenida Joao Paulo II_0" 11.222 21.806 solid black
+edge node5 node6 4 13.750 25.611 13.611 25.375 13.431 25.042 13.292 24.806 "Avenida Padre Julio Fragata_0" 14.764 25.208 solid black
+edge node8 node13 4 4.375 21.500 4.333 21.278 4.264 20.972 4.208 20.750 "Avenida Dr Antonio Palha_0" 5.486 21.125 solid black
+edge node13 node14 7 3.833 20.417 3.347 20.361 2.361 20.208 1.597 19.875 1.264 19.722 0.931 19.472 0.708 19.292 "Rua Pascoal Fernandes" 2.583 19.764 solid black
+edge node13 node12 4 4.431 20.333 5.125 20.083 6.861 19.444 7.542 19.194 "Rua Antonio Maniz_0" 7.139 19.764 solid black
+edge node13 node40 10 3.958 20.181 3.806 19.917 3.583 19.486 3.583 19.083 3.583 19.083 3.583 19.083 3.583 8.194 3.583 7.556 4.319 7.139 4.736 6.944 "Avenida Dr Antonio Palha_1" 4.722 13.639 solid black
+edge node10 node11 10 17.528 21.514 17.444 21.333 17.319 21.125 17.139 21.014 16.667 20.722 12.764 20.819 12.208 20.764 11.708 20.694 11.139 20.583 10.806 20.514 "Rua da Fabrica_1" 18.042 21.125 solid black
+edge node10 node17 7 17.917 21.694 18.181 21.597 18.597 21.417 18.944 21.236 19.278 21.056 19.639 20.792 19.875 20.625 "Rua Monsenhor Ferreira_0" 20.306 21.125 solid black
+edge node11 node12 4 10.222 20.306 9.708 20.042 8.611 19.486 8.111 19.222 "Rua da Fabrica_2" 10.125 19.764 solid black
+edge node11 node16 7 10.694 20.194 10.750 20.097 10.819 19.986 10.847 19.875 11.208 18.736 11.125 17.306 11.069 16.681 "Avenida Joao Paulo II_1" 12.097 18.403 solid black
+edge node12 node15 4 7.847 18.764 7.861 18.542 7.861 18.250 7.861 18.042 "Rua Antonio Maniz_1" 8.750 18.403 solid black
+edge node16 node34 7 11.194 16.097 11.514 15.639 12.222 14.708 13.042 14.208 13.611 13.861 14.389 13.722 14.819 13.667 "Avenida Joao Paulo II_2" 13.375 15.000 solid black
+edge node34 node35 13 15.431 13.611 15.444 13.611 15.444 13.611 15.458 13.611 16.375 13.500 16.597 13.417 17.528 13.319 18.931 13.153 19.306 13.292 20.708 13.069 21.819 12.889 23.111 12.528 23.681 12.361 "Rua do Enterro" 22.333 12.958 solid black
+edge node34 node37 7 15.431 13.569 15.819 13.472 16.514 13.292 17.083 13.069 17.528 12.875 18.028 12.611 18.319 12.431 "Avenida General Carrilho da Silva Pinto" 19.069 12.958 solid black
+edge node34 node36 4 15.125 13.319 15.125 13.097 15.125 12.806 15.125 12.597 "Estrada do Bom Jesus_0" 16.069 12.958 solid black
+edge node15 node16 7 8.153 17.583 8.486 17.417 9.069 17.139 9.583 16.931 9.986 16.764 10.444 16.583 10.736 16.472 "Rua da Rodovia" 10.222 17.042 solid black
+edge node15 node39 16 7.875 17.403 7.875 17.125 7.875 16.722 7.875 16.361 7.875 16.361 7.875 16.361 7.875 10.917 7.875 10.597 8.222 10.694 8.514 10.597 10.056 10.056 10.681 10.653 12.097 9.875 12.139 9.847 12.167 9.833 12.208 9.792 "Rua Luis Antonio Correia_0" 8.986 13.639 solid black
+edge node17 node18 4 19.833 20.347 19.056 20.097 17.000 19.431 16.236 19.181 "Rua Kefro" 18.792 19.764 solid black
+edge node17 node33 4 20.069 20.139 19.917 19.389 19.542 17.431 19.389 16.667 "Rua Monsenhor Ferreira_1" 20.778 18.403 solid black
+edge node22 node23 7 22.208 14.931 22.583 14.833 23.222 14.653 23.750 14.431 24.181 14.250 24.639 13.972 24.917 13.806 "Rua David Costa_1" 24.903 14.319 solid black
+edge node22 node24 4 21.917 14.681 21.917 14.458 21.917 14.167 21.917 13.958 "Rua Quinta dos Orfoes" 22.806 14.319 solid black
+edge node27 node28 4 12.167 13.319 12.167 13.097 12.167 12.806 12.167 12.597 "Rua Estrada Nova_1" 12.972 12.958 solid black
+edge node27 node29 7 11.875 13.556 11.542 13.458 10.986 13.278 10.528 13.069 10.139 12.889 9.722 12.625 9.458 12.444 "Rua Universidade_0" 11.458 12.958 solid black
+edge node29 node31 4 9.153 11.972 9.111 11.750 9.042 11.444 9.000 11.222 "Rua Universidade_1" 9.931 11.597 solid black
+edge node29 node30 7 9.500 12.194 9.833 12.111 10.361 11.944 10.764 11.708 11.042 11.556 11.319 11.306 11.486 11.139 "Rua de Barros" 11.667 11.597 solid black
+edge node36 node41 7 15.403 12.139 15.611 12.014 15.903 11.861 16.167 11.708 16.472 11.514 16.819 11.264 17.056 11.097 "Estrada do Bom Jesus_1" 17.403 11.597 solid black
+edge node36 node38 4 14.861 12.111 14.458 11.847 13.708 11.347 13.319 11.083 "Avenida Dom Joao II_0" 15.181 11.597 solid black
+edge node41 node42 4 17.306 10.597 17.306 10.375 17.306 10.083 17.306 9.875 "Rua da Luz" 17.750 10.236 solid black
+edge node38 node47 10 12.764 10.833 12.528 10.750 12.431 10.694 12.139 10.597 11.250 10.264 10.903 10.403 10.111 9.875 9.556 9.472 9.069 8.819 8.819 8.458 "Avenida Dom Joao II_1" 11.139 9.556 solid black
+edge node38 node39 4 12.917 10.639 12.806 10.403 12.653 10.069 12.542 9.833 "Rua Manuel Ferreira Gomes" 13.903 10.236 solid black
+edge node47 node40 4 8.361 8.083 7.681 7.833 6.000 7.194 5.319 6.944 "Avenida Dom Joao II_2" 8.125 7.514 solid black
+edge node40 node43 4 5.028 6.514 5.028 6.292 5.028 6.000 5.028 5.792 "Avenida Dom Joao II_3" 5.972 6.153 solid black
+edge node43 node46 7 4.722 5.403 4.347 5.306 3.667 5.125 3.111 4.903 2.681 4.722 2.194 4.444 1.903 4.278 "Avenida Dom Joao II_4" 4.181 4.792 solid black
+edge node43 node45 4 5.028 5.153 5.028 4.931 5.028 4.639 5.028 4.431 "Rua da Sena" 5.514 4.792 solid black
+edge node43 node44 7 5.306 5.333 5.514 5.222 5.806 5.056 6.042 4.903 6.319 4.722 6.597 4.486 6.778 4.319 "Avenida Robert Smith" 7.208 4.792 solid black
+edge node39 node47 4 12.111 9.444 11.417 9.208 9.639 8.556 8.944 8.306 "Rua Luis Antonio Correia_1" 12.000 8.875 solid black
+stop

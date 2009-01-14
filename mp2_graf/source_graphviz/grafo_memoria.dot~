@@ -1,0 +1,29 @@
+graph Mp2 {
+	graph [fontsize = 20,size = "12,6",ratio=expand,center=1,orientation="L",rankdir=LR
+		fontname="Courier"
+	];
+	node [
+		fontsize = "16"
+		sep=.05
+		pack=true
+		color=gray
+		style=filled
+		fontname="Courier"
+		];
+	edge[color=red,fontname="Courier"];
+	subgraph grafo {
+		{rank=same; "1"}
+		{rank=same; "2" "3"}
+		{rank=same; "4"}
+		{rank=same; "7" "6" "5"}
+		
+		"1" -- "2"[label="a"];
+		"2" -- "3"[label="b"];
+		"4" -- "3"[label="c"];
+		"4" -- "5"[label="d"];
+		"5" -- "6"[label="e_0"];
+		"7" -- "6"[label="e_1"];
+		"3" -- "5"[label="g"];
+		"6" -- "2"[label="f"];
+	}
+}

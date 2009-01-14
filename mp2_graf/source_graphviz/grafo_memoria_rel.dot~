@@ -1,0 +1,104 @@
+digraph g {
+	graph [ratio=expand,center=1,rankdir=LR
+		fontname="Courier"
+	];
+	node [
+		fontsize = "16"
+		sep=.05
+		shape=record,width=.1,height=.1
+		pack=false
+		fontname="Helvetica-Outline"
+		fontname="Courier"
+		];
+	ratio=fill;
+	edge [constraint=1,color=black,fontname="Courier"];
+	
+	node0 [label = "<f0> 1|<f1> 2|<f2> 3|<f3> 4|<f4> 5|<f5> 6|<f6> 7",height=2.5,shape = "record"];
+	
+	ruaA [label = "{<n1> *a |<ptr>*prox}",shape = "record"];
+	ruaA_A [label = "{<n1> *a |<ptr>*prox}",shape = "record"];
+	ruaB [label = "{<n1> *b |<ptr>*prox}",shape = "record"];
+	ruaB_B [label = "{<n1> *b |<ptr>*prox}",shape = "record"];
+	ruaC [label = "{<n1> *c |<ptr>*prox}",shape = "record"];
+	ruaC_C [label = "{<n1> *c |<ptr>*prox}",shape = "record"];
+	ruaD [label = "{<n1> *d |<ptr>*prox}",shape = "record"];
+	ruaD_D [label = "{<n1> *d |<ptr>*prox}",shape = "record"];
+	ruaE [label = "{<n1> *e_0 |<ptr>*prox}",shape = "record"];
+	ruaE_E [label = "{<n1> *e_0 |<ptr>*prox}",shape = "record"];
+	ruaF [label = "{<n1> *f |<ptr>*prox}",shape = "record"];
+	ruaF_F [label = "{<n1> *f |<ptr>*prox}",shape = "record"];
+	ruaG [label = "{<n1> *g |<ptr>*prox}",shape = "record"];
+	ruaG_G [label = "{<n1> *g |<ptr>*prox}",shape = "record"];
+	ruaE1 [label = "{<n1> *e_1 |<ptr>*prox}",shape = "record"];
+	ruaE1_ [label = "{<n1> *e_1 |<ptr>*prox}",shape = "record"];
+	
+	NULL_1 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_2 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_3 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_4 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_5 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_6 [label="NULL",shape = "record",color=gray77,style=filled];
+	NULL_9 [label="NULL",shape = "record",color=gray77,style=filled];
+	
+	ruaA_A:ptr -> NULL_1 [label="prox",shape = "record"];
+	ruaB:ptr -> ruaA[label="prox",shape = "record"];
+	ruaA:ptr -> ruaF [label="prox",shape = "record"];
+	ruaF:ptr -> NULL_2 [label="prox",shape = "record"];
+	ruaB_B:ptr -> ruaC [label="prox",shape = "record"];
+	ruaC:ptr -> ruaG [label="prox",shape = "record"];
+	ruaG:ptr -> NULL_3 [label="prox",shape = "record"];
+	ruaC_C:ptr -> ruaD [label="prox",shape = "record"];
+	ruaD:ptr -> NULL_4 [label="prox",shape = "record"];
+	ruaG_G:ptr -> ruaE [label="prox",shape = "record"];
+	ruaE:ptr -> ruaD_D [label="prox",shape = "record"];
+	ruaD_D:ptr -> NULL_5 [label="prox",shape = "record"];
+	ruaF_F:ptr -> ruaE_E [label="prox",shape = "record"];
+	ruaE_E:ptr -> ruaE1 [label="prox",shape = "record"];
+	ruaE1:ptr -> NULL_6 [label="prox",shape = "record"];
+	ruaE1_:ptr -> NULL_9 [label="prox",shape = "record"];
+
+	node0:f0 -> ruaA_A:n1 [shape = "record",label="arestas"];
+	node0:f1 -> ruaB:n1[shape = "record",label="arestas"];
+	node0:f2 -> ruaB_B:n1[shape = "record",label="arestas"];
+	node0:f3 -> ruaC_C:n1[shape = "record",label="arestas"];
+	node0:f4 -> ruaG_G:n1[shape = "record",label="arestas"];
+	node0:f5 -> ruaF_F:n1[shape = "record",label="arestas"];
+	node0:f6 -> ruaE1_:n1[shape = "record",label="arestas"];
+	
+	subgraph gg {
+		edge[color=red];
+		node[color=gold,style=filled];
+		
+		InfoRuaA[label="infoRuaA",shape="ellipse",color=gold,style=filled];
+		ruaA:n1 -> InfoRuaA;
+		ruaA_A:n1 -> InfoRuaA;
+		
+		InfoRuaB[label="infoRuaB",shape="ellipse"];
+		ruaB:n1 -> InfoRuaB;
+		ruaB_B:n1 -> InfoRuaB;
+		
+		InfoRuaC[label="infoRuaC",shape="ellipse"];
+		ruaC:n1 -> InfoRuaC;
+		ruaC_C:n1 -> InfoRuaC;
+		
+		InfoRuaD[label="infoRuaD",shape="ellipse"];
+		ruaD:n1 -> InfoRuaD;
+		ruaD_D:n1 -> InfoRuaD;
+		
+		InfoRuaE[label="infoRuaE0",shape="ellipse"];
+		ruaE:n1 -> InfoRuaE;
+		ruaE_E:n1 -> InfoRuaE;
+		
+		InfoRuaE1[label="infoRuaE1",shape="ellipse"];
+		ruaE1:n1 -> InfoRuaE1;
+		ruaE1_:n1 -> InfoRuaE1;
+		
+		InfoRuaF[label="infoRuaF",shape="ellipse"];
+		ruaF:n1 -> InfoRuaF;
+		ruaF_F:n1 -> InfoRuaF;
+		
+		InfoRuaG[label="infoRuaG",shape="ellipse"];
+		ruaG:n1 -> InfoRuaG;
+		ruaG_G:n1 -> InfoRuaG;
+	}
+}

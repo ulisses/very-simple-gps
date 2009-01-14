@@ -1,0 +1,14 @@
+typedef struct rua Rua;
+
+struct rua {
+	char *nome; // nome da rua
+	int limite1; // pontos (cruzamentos , vertices) que delimitam a rua
+	int limite2;
+	float comprimento; // tamanho da rua
+	float tempoMedio; // tempo medio a percorrer essa rua
+	int valorArquitectonico; // '0'-'9'
+	int valorPaisagistico; // '0'-'9'
+	int valorHistorico; // '0'-'9'
+	int valorComercial; // '0'-'9'
+	Ponto *listaPontos; // pontos de interesse
+};

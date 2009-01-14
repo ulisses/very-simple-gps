@@ -1,0 +1,15 @@
+typedef struct ponto {
+	char *nome; // nome do ponto de interesse
+	TipoPontoInteresse tipo;
+	int valorArquitectonico; // '0'-'9'
+	int valorPaisagistico; // '0'-'9'
+	int valorHistorico; // '0'-'9'
+	int valorComercial; // '0'-'9'
+	bool pontoTuristico;
+	char *descricao; // descricao do ponto de interesse
+	int limite1;
+	float distancia; // distancia do ponto de interesse ao cruzamento limite1
+	float tempoMedio; // tempo medio desde o cruzamento limite1 ate ao ponto de interesse
+	struct ponto * prox;
+	Rua * rua;
+}Ponto;

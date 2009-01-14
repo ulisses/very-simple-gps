@@ -1,0 +1,59 @@
+digraph g {
+	graph [ratio=expand,center=1,rankdir=LR
+		fontname="Courier"
+	];
+	node [
+		fontsize = "16"
+		sep=.05
+		shape=record,width=.1,height=.1
+		pack=false
+		fontname="Helvetica-Outline"
+		fontname="Courier"
+		];
+	ratio=fill;
+	edge [constraint=1,color=red,fontname="Courier"];
+
+	subgraph pontosRuaE1 {
+		pontos_TC[label="Teatro Circo info",shape="ellipse",color=gold,style=filled]
+		pontos_TC -> pontos_E1:pointerPonto;
+		
+		pontos_CP[label="Cinemas Paraiso info",shape="ellipse",color=gold,style=filled]
+		pontos_CP -> pontos_E1:pointerPonto;
+		
+		rua_E1 [shape=record, label="<pointerRua> *e_1 | {7 | 6} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> *pontos"]
+		
+		rua_E1_fake [label="infoRuaE1",color=gold,style=filled,shape = ellipse];
+	//	pontos_E1 [label="pontosRuaE1",color=gold,style=filled,shape = ellipse];
+	//	rua_E1:pontos -> pontos_E1[label="prox"];
+		rua_E1_fake -> rua_E1:pointerRua[label="rua"];
+		
+			pontos_E1 [shape=record, label="<pointerPonto> Teatro Circo | Teatro | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 6(limite) | {distancia|tempoMedio} |<pointerRua> *e_1| <prox> *prox"]
+			pontos_E11 [shape=record, label="<pointerPonto> Cinemas Paraiso | Cinema | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 7(limite) | {distancia|tempoMedio} |<pointerRua> *e_1| <prox> *prox"]
+		
+		rua_E1:pontos -> pontos_E1:pointerPonto[label="pontos"];
+		pontos_E1:prox -> pontos_E11:pointerPonto[label="prox"];
+		pontos_E11:prox -> NULL__1[label="prox"];
+		pontos_E1:pointerRua -> rua_E1:pointerRua[label="rua"];
+		pontos_E11:pointerRua -> rua_E1:pointerRua[label="rua"];
+		NULL__1 [label="NULL",shape = "record",color=gray77,style=filled];
+	}
+	
+	subgraph pontosRuaA {
+		pontos_UM[label="Universidade do Minho info",shape="ellipse",color=gold,style=filled]
+		pontos_UM -> pontos_A:pointerPonto;
+		
+		rua_A [shape=record, label="<pointerRua> *a | {1 | 2} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> *pontos"]
+		
+		rua_A_fake [label="infoRuaA",color=gold,style=filled,shape = ellipse];
+		rua_A_fake -> rua_A:pointerRua[label="rua"];
+		
+			pontos_A [shape=record, label="<pointerPonto> Universidade do Minho | Universidade | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 1(limite) | {distancia|tempoMedio} |<pointerRua> *e_1| <prox> *prox"]
+		
+		NULL__2 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		rua_A:pontos -> pontos_A:pointerPonto[label="pontos"];
+		pontos_A:prox -> NULL__2[label="prox"];
+		pontos_A:pointerRua -> rua_A:pointerRua[label="rua"];
+		NULL__2 [label="NULL",shape = "record",color=gray77,style=filled];
+	}
+}

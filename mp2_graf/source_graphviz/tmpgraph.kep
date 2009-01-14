@@ -1,0 +1,374 @@
+label(btex  etex,(1154bp,227bp)) withcolor black;
+label(btex  etex,(1154bp,174bp)) withcolor black;
+label(btex - MP2 - etex,(1154bp,121bp)) withcolor black;
+label(btex  etex,(1154bp,68bp)) withcolor black;
+label(btex Parte da cidade de braga etex,(1154bp,15bp)) withcolor black;
+  fill fullcircle xscaled 34bp yscaled 34bp shifted (598bp,2972bp) withcolor gray;
+draw fullcircle xscaled 34bp yscaled 34bp shifted (598bp,2972bp);
+label(btex 0 etex,(598bp,2967bp)) withcolor black;
+  fill fullcircle xscaled 34bp yscaled 34bp shifted (598bp,2824bp) withcolor gray;
+draw fullcircle xscaled 34bp yscaled 34bp shifted (598bp,2824bp);
+label(btex 3 etex,(598bp,2819bp)) withcolor black;
+draw (598bp,2955bp) 
+  ..controls (598bp,2927bp) and (598bp,2870bp).. (598bp,2841bp) withcolor black;
+label(btex Rua de Sao Vicente\(232.259995,7.450000\) etex,(720bp,2898bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (448bp,2667bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (448bp,2667bp);
+label(btex 10 etex,(448bp,2662bp)) withcolor black;
+draw (581bp,2822bp) 
+  ..controls (549bp,2816bp) and (479bp,2800bp).. (449bp,2754bp)
+  ..controls (437bp,2735bp) and (439bp,2708bp).. (442bp,2689bp) withcolor black;
+label(btex Avenida da Liberdade_0\(502.209991,16.680000\) etex,(588bp,2741bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (935bp,2667bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (935bp,2667bp);
+label(btex 12 etex,(935bp,2662bp)) withcolor black;
+draw (614bp,2817bp) 
+  ..controls (639bp,2805bp) and (691bp,2781bp).. (730bp,2754bp)
+  ..controls (739bp,2747bp) and (739bp,2743bp).. (748bp,2738bp)
+  ..controls (804bp,2704bp) and (878bp,2682bp).. (914bp,2672bp) withcolor black;
+label(btex Rua D. Pedro V\(1195.760010,39.860001\) etex,(866bp,2741bp)) withcolor black;
+  fill fullcircle xscaled 34bp yscaled 34bp shifted (220bp,2510bp) withcolor gray;
+draw fullcircle xscaled 34bp yscaled 34bp shifted (220bp,2510bp);
+label(btex 3 etex,(220bp,2505bp)) withcolor black;
+draw (426bp,2663bp) 
+  ..controls (376bp,2654bp) and (254bp,2628bp).. (228bp,2597bp)
+  ..controls (212bp,2577bp) and (214bp,2546bp).. (217bp,2527bp) withcolor black;
+label(btex Avenida da Liberdade_1\(375.640015,12.660000\) etex,(370bp,2584bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (592bp,2510bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (592bp,2510bp);
+label(btex 18 etex,(592bp,2505bp)) withcolor black;
+draw (462bp,2650bp) 
+  ..controls (477bp,2632bp) and (500bp,2604bp).. (521bp,2581bp)
+  ..controls (540bp,2561bp) and (561bp,2540bp).. (576bp,2526bp) withcolor black;
+label(btex Avenida Joao XXI\(1235.300049,41.180000\) etex,(647bp,2584bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1120bp,2510bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1120bp,2510bp);
+label(btex 15 etex,(1120bp,2505bp)) withcolor black;
+draw (957bp,2664bp) 
+  ..controls (993bp,2658bp) and (1064bp,2641bp).. (1101bp,2597bp)
+  ..controls (1116bp,2579bp) and (1120bp,2552bp).. (1120bp,2533bp) withcolor black;
+label(btex Rua Nova Santa Cruz_0\(203.559998,6.790000\) etex,(1241bp,2584bp)) withcolor black;
+draw (914bp,2659bp) 
+  ..controls (886bp,2647bp) and (834bp,2624bp).. (793bp,2597bp)
+  ..controls (785bp,2591bp) and (785bp,2586bp).. (775bp,2581bp)
+  ..controls (721bp,2548bp) and (649bp,2525bp).. (614bp,2516bp) withcolor black;
+label(btex Avenida Padre Julio Fragata_1\(259.529999,7.950000\) etex,(952bp,2584bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (975bp,2353bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (975bp,2353bp);
+label(btex 26 etex,(975bp,2348bp)) withcolor black;
+draw (1098bp,2506bp) 
+  ..controls (1065bp,2500bp) and (1004bp,2482bp).. (976bp,2439bp)
+  ..controls (964bp,2420bp) and (966bp,2393bp).. (969bp,2375bp) withcolor black;
+label(btex Rua Nova Santa Cruz_1\(235.759995,7.860000\) etex,(1109bp,2426bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1265bp,2353bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1265bp,2353bp);
+label(btex 24 etex,(1265bp,2348bp)) withcolor black;
+draw (1142bp,2504bp) 
+  ..controls (1170bp,2495bp) and (1220bp,2475bp).. (1247bp,2439bp)
+  ..controls (1260bp,2420bp) and (1264bp,2394bp).. (1265bp,2376bp) withcolor black;
+label(btex Rua da Fabrica_0\(52.340000,1.750000\) etex,(1365bp,2426bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1209bp,2038bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1209bp,2038bp);
+label(btex 28 etex,(1209bp,2033bp)) withcolor black;
+draw (959bp,2337bp) 
+  ..controls (936bp,2299bp) and (953bp,2272bp).. (949bp,2219bp)
+  ..controls (948bp,2198bp) and (939bp,2190bp).. (949bp,2173bp)
+  ..controls (1003bp,2084bp) and (1135bp,2051bp).. (1187bp,2042bp) withcolor black;
+label(btex Rua Nova Santa Cruz_2\(327.970001,10.930000\) etex,(1089bp,2191bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1254bp,2196bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1254bp,2196bp);
+label(btex 27 etex,(1254bp,2191bp)) withcolor black;
+draw (969bp,2331bp) 
+  ..controls (965bp,2312bp) and (962bp,2284bp).. (977bp,2266bp)
+  ..controls (1048bp,2182bp) and (1116bp,2259bp).. (1218bp,2219bp)
+  ..controls (1224bp,2216bp) and (1230bp,2213bp).. (1236bp,2209bp) withcolor black;
+label(btex Rua Quinta da armada\(410.000000,13.670000\) etex,(1109bp,2269bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1209bp,1881bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1209bp,1881bp);
+label(btex 28 etex,(1209bp,1876bp)) withcolor black;
+draw (1209bp,2015bp) 
+  ..controls (1209bp,1986bp) and (1209bp,1933bp).. (1209bp,1904bp) withcolor black;
+label(btex Rua Nova Santa Cruz_3\(412.320007,13.740000\) etex,(1346bp,1955bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1724bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1724bp);
+label(btex 29 etex,(1233bp,1719bp)) withcolor black;
+draw (1187bp,1879bp) 
+  ..controls (1127bp,1875bp) and (973bp,1856bp).. (1017bp,1795bp)
+  ..controls (1041bp,1763bp) and (1161bp,1737bp).. (1211bp,1728bp) withcolor black;
+label(btex Rua Nova Santa Cruz_4\(45.450001,1.520000\) etex,(1147bp,1798bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1303bp,1724bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1303bp,1724bp);
+label(btex 29 etex,(1303bp,1719bp)) withcolor black;
+draw (1227bp,1868bp) 
+  ..controls (1243bp,1855bp) and (1267bp,1834bp).. (1281bp,1811bp)
+  ..controls (1292bp,1791bp) and (1298bp,1765bp).. (1300bp,1747bp) withcolor black;
+label(btex Rua Lusiada\(47.230000,1.570000\) etex,(1384bp,1798bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1567bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1567bp);
+label(btex 38 etex,(1233bp,1562bp)) withcolor black;
+draw (1233bp,1701bp) 
+  ..controls (1233bp,1672bp) and (1233bp,1619bp).. (1233bp,1590bp) withcolor black;
+label(btex Rua Nova Santa Cruz_5\(300.529999,10.010000\) etex,(1370bp,1640bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1798bp,1567bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1798bp,1567bp);
+label(btex 31 etex,(1798bp,1562bp)) withcolor black;
+draw (1251bp,1711bp) 
+  ..controls (1258bp,1708bp) and (1265bp,1704bp).. (1272bp,1701bp)
+  ..controls (1373bp,1662bp) and (1405bp,1679bp).. (1511bp,1653bp)
+  ..controls (1612bp,1627bp) and (1730bp,1589bp).. (1777bp,1574bp) withcolor black;
+label(btex Rua David Costa_0\(26.530001,0.880000\) etex,(1681bp,1640bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1410bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1233bp,1410bp);
+label(btex 41 etex,(1233bp,1405bp)) withcolor black;
+draw (1233bp,1544bp) 
+  ..controls (1233bp,1515bp) and (1233bp,1462bp).. (1233bp,1433bp) withcolor black;
+label(btex Rua Vasco Ferreira\(73.239998,2.440000\) etex,(1349bp,1483bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1489bp,1410bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1489bp,1410bp);
+label(btex 33 etex,(1489bp,1405bp)) withcolor black;
+draw (1255bp,1563bp) 
+  ..controls (1308bp,1554bp) and (1440bp,1528bp).. (1470bp,1496bp)
+  ..controls (1485bp,1479bp) and (1489bp,1452bp).. (1490bp,1433bp) withcolor black;
+label(btex Rua Ulisses da Monhe Costa\(43.599998,1.450000\) etex,(1621bp,1483bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (960bp,1410bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (960bp,1410bp);
+label(btex 35 etex,(960bp,1405bp)) withcolor black;
+draw (1214bp,1555bp) 
+  ..controls (1207bp,1551bp) and (1199bp,1547bp).. (1191bp,1544bp)
+  ..controls (1098bp,1509bp) and (1043bp,1567bp).. (975bp,1496bp)
+  ..controls (960bp,1479bp) and (957bp,1452bp).. (958bp,1433bp) withcolor black;
+label(btex Rua Estrada Nova_0\(453.000000,15.100000\) etex,(1105bp,1483bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (306bp,2353bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (306bp,2353bp);
+label(btex 54 etex,(306bp,2348bp)) withcolor black;
+draw (570bp,2507bp) 
+  ..controls (511bp,2500bp) and (353bp,2476bp).. (319bp,2439bp)
+  ..controls (304bp,2422bp) and (302bp,2395bp).. (303bp,2376bp) withcolor black;
+label(btex Rua Frei Bartolomeu dos Martires\(432.450012,14.420000\) etex,(488bp,2426bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (753bp,2196bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (753bp,2196bp);
+label(btex 19 etex,(753bp,2191bp)) withcolor black;
+draw (609bp,2495bp) 
+  ..controls (623bp,2482bp) and (642bp,2461bp).. (653bp,2439bp)
+  ..controls (675bp,2394bp) and (657bp,2376bp).. (674bp,2330bp)
+  ..controls (691bp,2285bp) and (722bp,2239bp).. (740bp,2214bp) withcolor black;
+label(btex Avenida Joao Paulo II_0\(249.460007,8.320000\) etex,(810bp,2348bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1006bp,2824bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1006bp,2824bp);
+label(btex 11 etex,(1006bp,2819bp)) withcolor black;
+draw (1004bp,2801bp) 
+  ..controls (1002bp,2783bp) and (997bp,2758bp).. (987bp,2738bp)
+  ..controls (978bp,2717bp) and (962bp,2697bp).. (950bp,2683bp) withcolor black;
+label(btex Avenida Padre Julio Fragata_0\(518.109985,17.270000\) etex,(1150bp,2741bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (306bp,2196bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (306bp,2196bp);
+label(btex 55 etex,(306bp,2191bp)) withcolor black;
+draw (306bp,2330bp) 
+  ..controls (306bp,2301bp) and (306bp,2248bp).. (306bp,2219bp) withcolor black;
+label(btex Avenida Dr Antonio Palha_0\(260.339996,8.680000\) etex,(454bp,2269bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (22bp,2038bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (22bp,2038bp);
+label(btex 15 etex,(22bp,2033bp)) withcolor black;
+draw (284bp,2194bp) 
+  ..controls (223bp,2187bp) and (56bp,2166bp).. (23bp,2125bp)
+  ..controls (9bp,2106bp) and (12bp,2079bp).. (16bp,2060bp) withcolor black;
+label(btex Rua Pascoal Fernandes\(130.639999,4.350000\) etex,(154bp,2112bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (616bp,2038bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (616bp,2038bp);
+label(btex 22 etex,(616bp,2033bp)) withcolor black;
+draw (319bp,2178bp) 
+  ..controls (334bp,2158bp) and (361bp,2127bp).. (390bp,2109bp)
+  ..controls (458bp,2067bp) and (552bp,2048bp).. (594bp,2041bp) withcolor black;
+label(btex Rua Antonio Maniz_0\(204.149994,6.080000\) etex,(519bp,2112bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (397bp,624bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (397bp,624bp);
+label(btex 56 etex,(397bp,619bp)) withcolor black;
+draw (304bp,2173bp) 
+  ..controls (302bp,2143bp) and (298bp,2086bp).. (298bp,2038bp)
+  ..controls (298bp,2038bp) and (298bp,2038bp).. (298bp,781bp)
+  ..controls (298bp,720bp) and (351bp,664bp).. (380bp,638bp) withcolor black;
+label(btex Avenida Dr Antonio Palha_1\(272.190002,9.070000\) etex,(446bp,1405bp)) withcolor black;
+draw (1266bp,2330bp) 
+  ..controls (1266bp,2310bp) and (1263bp,2282bp).. (1245bp,2266bp)
+  ..controls (1243bp,2264bp) and (870bp,2212bp).. (775bp,2199bp) withcolor black;
+label(btex Rua da Fabrica_1\(63.430000,2.110000\) etex,(1368bp,2269bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1509bp,2196bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1509bp,2196bp);
+label(btex 27 etex,(1509bp,2191bp)) withcolor black;
+draw (1287bp,2349bp) 
+  ..controls (1337bp,2339bp) and (1462bp,2312bp).. (1490bp,2282bp)
+  ..controls (1505bp,2265bp) and (1509bp,2238bp).. (1510bp,2219bp) withcolor black;
+label(btex Rua Monsenhor Ferreira_0\(275.149994,9.170000\) etex,(1639bp,2269bp)) withcolor black;
+draw (734bp,2185bp) 
+  ..controls (713bp,2173bp) and (681bp,2151bp).. (659bp,2125bp)
+  ..controls (643bp,2105bp) and (631bp,2078bp).. (624bp,2059bp) withcolor black;
+label(btex Rua da Fabrica_2\(197.080002,6.570000\) etex,(778bp,2112bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (903bp,1724bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (903bp,1724bp);
+label(btex 24 etex,(903bp,1719bp)) withcolor black;
+draw (775bp,2192bp) 
+  ..controls (807bp,2185bp) and (867bp,2166bp).. (893bp,2125bp)
+  ..controls (933bp,2061bp) and (913bp,1821bp).. (905bp,1746bp) withcolor black;
+label(btex Avenida Joao Paulo II_1\(344.339996,11.480000\) etex,(1057bp,1955bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (629bp,1881bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (629bp,1881bp);
+label(btex 50 etex,(629bp,1876bp)) withcolor black;
+draw (615bp,2015bp) 
+  ..controls (615bp,1998bp) and (615bp,1973bp).. (617bp,1952bp)
+  ..controls (619bp,1936bp) and (622bp,1917bp).. (624bp,1903bp) withcolor black;
+label(btex Rua Antonio Maniz_1\(406.170013,14.260000\) etex,(750bp,1955bp)) withcolor black;
+draw (900bp,1702bp) 
+  ..controls (896bp,1652bp) and (893bp,1532bp).. (963bp,1480bp)
+  ..controls (1003bp,1449bp) and (1154bp,1423bp).. (1211bp,1413bp) withcolor black;
+label(btex Avenida Joao Paulo II_2\(351.540009,11.710000\) etex,(1056bp,1562bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1918bp,1252bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1918bp,1252bp);
+label(btex 40 etex,(1918bp,1247bp)) withcolor black;
+draw (1255bp,1409bp) 
+  ..controls (1259bp,1408bp) and (1263bp,1408bp).. (1267bp,1408bp)
+  ..controls (1268bp,1407bp) and (1888bp,1339bp).. (1889bp,1339bp)
+  ..controls (1908bp,1323bp) and (1914bp,1295bp).. (1917bp,1275bp) withcolor black;
+label(btex Rua do Enterro\(15.530000,0.520000\) etex,(2005bp,1326bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1529bp,1252bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1529bp,1252bp);
+label(btex 41 etex,(1529bp,1247bp)) withcolor black;
+draw (1255bp,1407bp) 
+  ..controls (1315bp,1400bp) and (1475bp,1376bp).. (1511bp,1339bp)
+  ..controls (1527bp,1322bp) and (1530bp,1294bp).. (1530bp,1275bp) withcolor black;
+label(btex Avenida General Carrilho da Silva Pinto\(846.359985,28.209999\) etex,(1702bp,1326bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1230bp,1252bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1230bp,1252bp);
+label(btex 44 etex,(1230bp,1247bp)) withcolor black;
+draw (1232bp,1387bp) 
+  ..controls (1232bp,1373bp) and (1231bp,1355bp).. (1231bp,1339bp)
+  ..controls (1230bp,1317bp) and (1230bp,1292bp).. (1230bp,1275bp) withcolor black;
+label(btex Estrada do Bom Jesus_0\(464.209991,15.470000\) etex,(1369bp,1326bp)) withcolor black;
+draw (635bp,1859bp) 
+  ..controls (642bp,1839bp) and (654bp,1811bp).. (674bp,1795bp)
+  ..controls (736bp,1742bp) and (837bp,1729bp).. (881bp,1725bp) withcolor black;
+label(btex Rua da Rodovia\(34.230000,1.140000\) etex,(782bp,1798bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (974bp,938bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (974bp,938bp);
+label(btex 51 etex,(974bp,933bp)) withcolor black;
+draw (629bp,1858bp) 
+  ..controls (629bp,1828bp) and (629bp,1771bp).. (629bp,1724bp)
+  ..controls (629bp,1724bp) and (629bp,1724bp).. (629bp,1095bp)
+  ..controls (629bp,1081bp) and (638bp,1079bp).. (648bp,1072bp)
+  ..controls (765bp,989bp) and (829bp,1036bp).. (950bp,961bp)
+  ..controls (953bp,959bp) and (956bp,957bp).. (959bp,955bp) withcolor black;
+label(btex Rua Luis Antonio Correia_0\(146.139999,4.870000\) etex,(775bp,1405bp)) withcolor black;
+draw (1487bp,2191bp) 
+  ..controls (1450bp,2181bp) and (1371bp,2159bp).. (1312bp,2125bp)
+  ..controls (1277bp,2105bp) and (1243bp,2073bp).. (1224bp,2054bp) withcolor black;
+label(btex Rua Kefro\(25.350000,0.850000\) etex,(1406bp,2112bp)) withcolor black;
+draw (1515bp,2174bp) 
+  ..controls (1532bp,2109bp) and (1573bp,1914bp).. (1486bp,1795bp)
+  ..controls (1447bp,1742bp) and (1365bp,1729bp).. (1325bp,1725bp) withcolor black;
+label(btex Rua Monsenhor Ferreira_1\(200.100006,6.670000\) etex,(1679bp,1955bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (2074bp,1410bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (2074bp,1410bp);
+label(btex 31 etex,(2074bp,1405bp)) withcolor black;
+draw (1820bp,1564bp) 
+  ..controls (1876bp,1555bp) and (2022bp,1530bp).. (2055bp,1496bp)
+  ..controls (2070bp,1479bp) and (2074bp,1452bp).. (2075bp,1433bp) withcolor black;
+label(btex Rua David Costa_1\(37.000000,1.250000\) etex,(2180bp,1483bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1798bp,1410bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1798bp,1410bp);
+label(btex 32 etex,(1798bp,1405bp)) withcolor black;
+draw (1798bp,1544bp) 
+  ..controls (1798bp,1515bp) and (1798bp,1462bp).. (1798bp,1433bp) withcolor black;
+label(btex Rua Quinta dos Orfoes\(78.430000,2.610000\) etex,(1924bp,1483bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (960bp,1252bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (960bp,1252bp);
+label(btex 35 etex,(960bp,1247bp)) withcolor black;
+draw (960bp,1387bp) 
+  ..controls (960bp,1357bp) and (960bp,1305bp).. (960bp,1275bp) withcolor black;
+label(btex Rua Estrada Nova_1\(148.000000,4.930000\) etex,(1083bp,1326bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (691bp,1252bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (691bp,1252bp);
+label(btex 37 etex,(691bp,1247bp)) withcolor black;
+draw (942bp,1397bp) 
+  ..controls (937bp,1393bp) and (930bp,1389bp).. (924bp,1387bp)
+  ..controls (835bp,1349bp) and (779bp,1408bp).. (710bp,1339bp)
+  ..controls (694bp,1322bp) and (690bp,1294bp).. (690bp,1275bp) withcolor black;
+label(btex Rua Universidade_0\(225.500000,7.520000\) etex,(837bp,1326bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (679bp,1095bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (679bp,1095bp);
+label(btex 37 etex,(679bp,1090bp)) withcolor black;
+draw (683bp,1231bp) 
+  ..controls (679bp,1217bp) and (674bp,1199bp).. (671bp,1182bp)
+  ..controls (668bp,1160bp) and (671bp,1135bp).. (674bp,1117bp) withcolor black;
+label(btex Rua Universidade_1\(83.419998,2.780000\) etex,(794bp,1169bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (932bp,1095bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (932bp,1095bp);
+label(btex 38 etex,(932bp,1090bp)) withcolor black;
+draw (713bp,1248bp) 
+  ..controls (764bp,1238bp) and (887bp,1212bp).. (914bp,1182bp)
+  ..controls (930bp,1164bp) and (933bp,1137bp).. (933bp,1118bp) withcolor black;
+label(btex Rua de Barros\(175.149994,5.830000\) etex,(1031bp,1169bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1448bp,1095bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1448bp,1095bp);
+label(btex 43 etex,(1448bp,1090bp)) withcolor black;
+draw (1252bp,1247bp) 
+  ..controls (1298bp,1236bp) and (1404bp,1209bp).. (1429bp,1182bp)
+  ..controls (1444bp,1164bp) and (1448bp,1137bp).. (1449bp,1118bp) withcolor black;
+label(btex Estrada do Bom Jesus_1\(2036.219971,67.879997\) etex,(1578bp,1169bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (994bp,1095bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (994bp,1095bp);
+label(btex 49 etex,(994bp,1090bp)) withcolor black;
+draw (1214bp,1236bp) 
+  ..controls (1191bp,1211bp) and (1148bp,1167bp).. (1147bp,1166bp)
+  ..controls (1104bp,1135bp) and (1046bp,1113bp).. (1015bp,1102bp) withcolor black;
+label(btex Avenida Dom Joao II_0\(74.339996,2.480000\) etex,(1291bp,1169bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (1448bp,938bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (1448bp,938bp);
+label(btex 44 etex,(1448bp,933bp)) withcolor black;
+draw (1448bp,1072bp) 
+  ..controls (1448bp,1043bp) and (1448bp,990bp).. (1448bp,961bp) withcolor black;
+label(btex Rua da Luz\(1835.530029,61.180000\) etex,(1553bp,1012bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (661bp,781bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (661bp,781bp);
+label(btex 52 etex,(661bp,776bp)) withcolor black;
+draw (977bp,1081bp) 
+  ..controls (973bp,1078bp) and (969bp,1075bp).. (963bp,1072bp)
+  ..controls (841bp,1004bp) and (752bp,1073bp).. (670bp,961bp)
+  ..controls (636bp,914bp) and (647bp,839bp).. (655bp,803bp) withcolor black;
+label(btex Avenida Dom Joao II_1\(445.760010,14.860000\) etex,(810bp,933bp)) withcolor black;
+draw (991bp,1073bp) 
+  ..controls (988bp,1043bp) and (981bp,990bp).. (977bp,960bp) withcolor black;
+label(btex Rua Manuel Ferreira Gomes\(234.779999,7.830000\) etex,(1131bp,1012bp)) withcolor black;
+draw (642bp,769bp) 
+  ..controls (593bp,740bp) and (465bp,664bp).. (416bp,635bp) withcolor black;
+label(btex Avenida Dom Joao II_2\(467.750000,15.590000\) etex,(675bp,697bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (397bp,467bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (397bp,467bp);
+label(btex 53 etex,(397bp,462bp)) withcolor black;
+draw (397bp,601bp) 
+  ..controls (397bp,572bp) and (397bp,519bp).. (397bp,490bp) withcolor black;
+label(btex Avenida Dom Joao II_3\(378.970001,12.630000\) etex,(534bp,540bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (101bp,309bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (101bp,309bp);
+label(btex 49 etex,(101bp,304bp)) withcolor black;
+draw (375bp,464bp) 
+  ..controls (316bp,456bp) and (156bp,432bp).. (120bp,396bp)
+  ..controls (104bp,379bp) and (100bp,351bp).. (100bp,332bp) withcolor black;
+label(btex Avenida Dom Joao II_4\(386.000000,12.890000\) etex,(261bp,383bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (397bp,309bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (397bp,309bp);
+label(btex 53 etex,(397bp,304bp)) withcolor black;
+draw (397bp,444bp) 
+  ..controls (397bp,414bp) and (397bp,362bp).. (397bp,332bp) withcolor black;
+label(btex Rua da Sena\(453.429993,15.110000\) etex,(502bp,383bp)) withcolor black;
+  fill fullcircle xscaled 42bp yscaled 44bp shifted (628bp,309bp) withcolor gray;
+draw fullcircle xscaled 42bp yscaled 44bp shifted (628bp,309bp);
+label(btex 54 etex,(628bp,304bp)) withcolor black;
+draw (419bp,462bp) 
+  ..controls (467bp,452bp) and (583bp,424bp).. (609bp,396bp)
+  ..controls (625bp,378bp) and (629bp,351bp).. (629bp,332bp) withcolor black;
+label(btex Avenida Robert Smith\(398.750000,13.290000\) etex,(753bp,383bp)) withcolor black;
+draw (955bp,925bp) 
+  ..controls (950bp,922bp) and (944bp,918bp).. (938bp,915bp)
+  ..controls (845bp,863bp) and (728bp,810bp).. (681bp,790bp) withcolor black;
+label(btex Rua Luis Antonio Correia_1\(240.089996,8.000000\) etex,(996bp,855bp)) withcolor black;
+
+end

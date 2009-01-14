@@ -1,0 +1,13 @@
+typedef struct avl {
+	BF bf;
+	char * nomeRua;
+	LLRuas * ruas;
+	struct avl *left, *right;
+}AvlRuas;
+
+typedef enum {LB, EB, RB} BF;
+
+typedef struct llRuas {
+	Rua *rua;
+	struct llRuas *prox;
+}LLRuas;

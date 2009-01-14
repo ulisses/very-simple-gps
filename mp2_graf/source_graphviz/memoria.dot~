@@ -1,0 +1,240 @@
+digraph g {
+	graph [fontsize = 45,label = "\n\n- MP2 -\n\nMemória" ,size = "12,6",ratio=expand,center=1,orientation="L",rankdir=LR
+		fontname="Courier"
+	];
+	node [
+		fontsize = "16"
+		sep=.05
+		shape=record,width=.1,height=.1
+		pack=false
+		fontname="Helvetica-Outline"
+		fontname="Courier"
+		];
+	ratio=fill;
+	edge [constraint=1,color=red,fontname="Courier"];
+	
+	subgraph grafo {
+// 		node [shape=record];
+		node0 [label = "<f0> 1|<f1> 2|<f2> 3|<f3> 4|<f4> 5|<f5> 6|<f6> 7",height=2.5,shape = "record"];
+		
+		ruaA [label = "{<n1> a |<ptr>*prox}",shape = "record"];
+		ruaA_A [label = "{<n1> a |<ptr>*prox}",shape = "record"];
+		ruaB [label = "{<n1> b |<ptr>*prox}",shape = "record"];
+		ruaB_B [label = "{<n1> b |<ptr>*prox}",shape = "record"];
+		ruaC [label = "{<n1> c |<ptr>*prox}",shape = "record"];
+		ruaC_C [label = "{<n1> c |<ptr>*prox}",shape = "record"];
+		ruaD [label = "{<n1> d |<ptr>*prox}",shape = "record"];
+		ruaD_D [label = "{<n1> d |<ptr>*prox}",shape = "record"];
+		ruaE [label = "{<n1> e_0 |<ptr>*prox}",shape = "record"];
+		ruaE_E [label = "{<n1> e_0 |<ptr>*prox}",shape = "record"];
+		ruaF [label = "{<n1> f |<ptr>*prox}",shape = "record"];
+		ruaF_F [label = "{<n1> f |<ptr>*prox}",shape = "record"];
+		ruaG [label = "{<n1> g |<ptr>*prox}",shape = "record"];
+		ruaG_G [label = "{<n1> g |<ptr>*prox}",shape = "record"];
+		
+		ruaE1 [label = "{<n1> e_1 |<ptr>}",shape = "record"];
+		ruaE1_ [label = "{<n1> e_1 |<ptr>}",shape = "record"];
+		
+		NULL_1 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_2 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_3 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_4 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_5 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_6 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_8 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_9 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		ruaA_A:ptr -> NULL_1 [label="prox",shape = "record"];
+		ruaB:ptr -> ruaA;
+		ruaA:ptr -> ruaF [label="prox",shape = "record"];
+		ruaF:ptr -> NULL_2 [label="prox",shape = "record"];
+		ruaB_B:ptr -> ruaC [label="prox",shape = "record"];
+		ruaC:ptr -> ruaG [label="prox",shape = "record"];
+		ruaG:ptr -> NULL_3 [label="prox",shape = "record"];
+		ruaC_C:ptr -> ruaD [label="prox",shape = "record"];
+		ruaD:ptr -> NULL_4 [label="prox",shape = "record"];
+		ruaG_G:ptr -> ruaE [label="prox",shape = "record"];
+		ruaE:ptr -> ruaD_D [label="prox",shape = "record"];
+		ruaD_D:ptr -> NULL_5 [label="prox",shape = "record"];
+		ruaF_F:ptr -> ruaE_E [label="prox",shape = "record"];
+		ruaE_E:ptr -> ruaE1 [label="prox",shape = "record"];
+		ruaE1:ptr -> NULL_6 [label="prox",shape = "record"];
+		
+		ruaE1_:ptr -> NULL_9 [label="prox",shape = "record"];
+		
+		node0:f0 -> ruaA_A:n1 [shape = "record",label="arestas"];
+		node0:f1 -> ruaB:n1[shape = "record",label="arestas"];
+		node0:f2 -> ruaB_B:n1[shape = "record",label="arestas"];
+		node0:f3 -> ruaC_C:n1[shape = "record",label="arestas"];
+		node0:f4 -> ruaG_G:n1[shape = "record",label="arestas"];
+		node0:f5 -> ruaF_F:n1[shape = "record",label="arestas"];
+		node0:f6 -> ruaE1_:n1[shape = "record",label="arestas"];
+		
+		rua_A [shape=record, label="<pointerID> a | {1 | 2} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> pontos"]
+		rua_E [shape=record, label="<pointerRua> e_0 | {6 | 5} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> pontos"]
+		rua_E1 [shape=record, label="<pointerRua> e_1 | {7 | 6} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> pontos"]
+		rua_G [shape=record, label="<pointerID> g | {3 | 5} | { comprimento | tempoMedio } | {valArq | valHist| valPai|ValCom} |<pontos> pontos"]
+		
+		
+		
+		pontos_E1 [shape=record, label="<pointerPonto> Teatro Circo | Teatro | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 6(limite) | {distancia|tempoMedio} |<pointerRua> e_1| <prox> prox"]
+
+		rua_E1:pontos -> pontos_E1:pointerPonto[label="pontos"];
+		pontos_E1:prox -> NULL__3[label="pontos"];
+		
+		pontos_E1:pointerRua -> rua_E1:pointerRua[label="rua"];
+		
+		
+		NULL__3 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL__0 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		rua_G:pontos -> NULL__0[label="pontos"];
+		
+		ruaG:n1 -> rua_G:pointerID [label="rua"];
+		ruaG_G:n1 -> rua_G:pointerID [label="rua"];
+		
+		ruaA:n1 -> rua_A:pointerID[label="rua",shape = "record"];
+		ruaA_A:n1 -> rua_A:pointerID[label="rua",shape = "record"];
+		/*
+		ruaB:n1 -> rua_B:pointerRua;
+		ruaB_B:n1 -> rua_B:pointerRua;
+		
+		ruaC:n1 -> rua_C:pointerRua;
+		ruaC_C:n1 -> rua_C:pointerRua;
+		
+		ruaD:n1 -> rua_D:pointerRua;
+		ruaD_D:n1 -> rua_D:pointerRua;
+		*/
+		ruaE:n1 -> rua_E:pointerRua[label="rua",shape = "record"];
+		ruaE_E:n1 -> rua_E:pointerRua[label="rua",shape = "record"];
+		rua_E:pontos -> NULL__4[label="prox"];
+		
+		NULL__4 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		ruaE1_:n1 -> rua_E1:pointerRua[label="rua",shape = "record"];
+		ruaE1:n1 -> rua_E1:pointerRua[label="rua",shape = "record"];
+		
+/*		ruaF:n1 -> rua_F:pointerRua;
+		ruaF_F:n1 -> rua_F:pointerRua;
+		ruaG:n1 -> rua_G:pointerID[shape = "record"];
+		ruaG_G:n1 -> rua_G:pointerID[shape = "record"];
+		*/
+		pontos_A [shape=record, label="<pointerPonto> gota d'agua | tipo | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 1(limite) | {distancia|tempoMedio} |<pointerRua> a| <prox> prox"]
+		
+		pontos_A1 [shape=record, label="<pointerPonto> steffane | tipo | {ValArq|valHist|valPai|valCom} | pontoTuristico | descricao | 2(limite) | {distancia|tempoMedio} |<pointerRua> a| <prox> prox"]
+		
+		rua_A:pontos -> pontos_A:pointerPonto [label="pontos",shape = "record"];
+		pontos_A:prox -> pontos_A1:pointerPonto [label="prox",shape = "record"];
+		
+		pontos_A:pointerRua -> rua_A:pointerID [label="rua",shape = "record"];
+		pontos_A1:pointerRua -> rua_A:pointerID [label="rua",shape = "record"];
+		pontos_A1:prox -> NULL_8 [label="prox",shape = "record"];
+	}
+	
+	subgraph avlRota {
+		node_0 [ label ="EB | {<f1> d (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node1 [ label ="EB | {<f1> f (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node4 [ label ="EB | {<f1> g (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node6 [ label ="EB | {<f1> e (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node2 [ label ="EB | {<f1> b (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node5 [ label ="EB | {<f1> c (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node9 [ label ="EB | {<f1> a (nomeRua) | <ptrRua> *LLRua| {<f0> Right| <f2> Left}}",shape = "record"];
+		node_0:ptrRua -> NULL_11[label="LLRuas"];
+		node1:ptrRua -> NULL_22[label="LLRuas"];
+		
+		node9:ptrRua -> caixaa:umptr[label="LLRuas"];
+		caixaa:umptr -> rua_A:pointerID[label="prox"];
+		caixaa:proxi -> NULL__2[label="prox"];
+		NULL__2[label="NULL",color=gray77,style=filled];
+		caixaa[label="{<umptr> a | <proxi> *prox}",shape = "record"];
+		
+		node4:ptrRua -> caixag:umptr[label="LLRuas"];
+		caixag:umptr -> rua_G:pointerID[label="prox"];
+		caixag:proxi -> NULL__1[label="prox"];
+		NULL__1[label="NULL",color=gray77,style=filled];
+		caixag[label="{<umptr> g | <proxi> *prox}",shape = "record"];
+		
+		node2:ptrRua -> NULL_55[label="LLRuas"];
+		node5:ptrRua -> NULL_66[label="LLRuas"];
+
+		NULL_11 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_22 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_55 [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_66 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		node8 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		node10 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		node7 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		node3 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		
+		node5_5 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		node5_5_ [ label ="NULL",shape = "record",color=gray77,style=filled];
+		
+		node6_6 [ label ="NULL",shape = "record",color=gray77,style=filled];
+		node6_6_ [ label ="NULL",shape = "record",color=gray77,style=filled];
+		
+		"node_0":f0 -> "node1":f1[shape = "record"];
+		"node_0":f2 -> "node2":f1[shape = "record"];
+		"node1":f0 -> "node4":f1[shape = "record"];
+		"node1":f2 -> "node6":f1[shape = "record"];
+		"node4":f0 -> "node7":f1[shape = "record"];
+		"node4":f2 -> "node3":f1[shape = "record"];
+		"node2":f0 -> "node5":f1[shape = "record"];
+		"node2":f2 -> "node9":f1[shape = "record"];
+		"node9":f0 -> "node8":f1[shape = "record"];
+		"node9":f2 -> "node10":f1[shape = "record"];
+		
+		"node5":f0 -> "node5_5" [shape = "record"];
+		"node5":f2 -> "node5_5_" [shape = "record"];
+		
+		"node6":f0 -> "node6_6" [shape = "record"];
+		"node6":f2 -> "node6_6_" [shape = "record"];
+		
+		caixa[label="{<umptr> e_0 | <proxi> prox}",shape = "record"];
+		
+		caixae1[label="{<umptr> e_1 | <proxi> prox}",shape = "record"];
+		
+		NULL_10 [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		node6:ptrRua -> caixa:umptr [shape = "record",label="LLRuas"];
+		caixa:umptr -> rua_E[shape = "record",label="rua"];
+		caixa:proxi -> caixae1[shape = "record",label="prox"];
+		caixae1:proxi -> NULL_10[label="prox"];
+		
+		caixae1:umptr -> rua_E1:pointerRua[shape = "record",label="rua"];
+		
+// 		node_1:ptrRua -> caixa [shape = "record"];
+		
+	}
+	
+	subgraph avlRotaPontos {
+		nodo1 [ label ="EB | {<f1> gota d'agua (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		nodo2 [ label ="EB | {<f1> steffane (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		nodo3 [ label ="EB | {<f1> Teatro Circo (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		
+		NULL_11_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_22_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_33_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_44_ [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		nodo2:f0 -> nodo3:f1
+		nodo2:f2 -> nodo1:f1
+		nodo1:f0 -> NULL_11_
+		nodo1:f2 -> NULL_22_
+		nodo3:f0 -> NULL_33_
+		nodo3:f2 -> NULL_44_
+		
+		nodo1:pontos -> pontos_A:pointerPonto[label="ponto"];
+		nodo2:pontos -> pontos_A1:pointerPonto[label="ponto"];
+		nodo3:pontos -> pontos_E1:pointerPonto[label="ponto"];
+		
+// 		node6:ptrRua -> caixa:umptr [shape = "record",label="LLRuas"];
+// 		caixa:umptr -> rua_E[shape = "record",label="rua"];
+// 		caixa:proxi -> caixae1[shape = "record",label="prox"];
+// 		caixae1:proxi -> NULL_10[label="prox"];
+// 		
+// 		caixae1:umptr -> rua_E1:pointerRua[shape = "record",label="rua"];
+// 		
+// 		node_1:ptrRua -> caixa [shape = "record"];
+	}
+}

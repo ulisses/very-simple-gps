@@ -1,0 +1,1839 @@
+%!PS-Adobe-2.0
+%%Creator: dot version 2.2.1 (Mon May  9 08:37:06 UTC 2005)
+%%For: (ulisses) ,,,
+%%Title: Mp2
+%%Pages: (atend)
+%%BoundingBox: 35 35 626 786
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+
+EncodingVector
+  dup 306 /AE
+  dup 301 /Aacute
+  dup 302 /Acircumflex
+  dup 304 /Adieresis
+  dup 300 /Agrave
+  dup 305 /Aring
+  dup 303 /Atilde
+  dup 307 /Ccedilla
+  dup 311 /Eacute
+  dup 312 /Ecircumflex
+  dup 313 /Edieresis
+  dup 310 /Egrave
+  dup 315 /Iacute
+  dup 316 /Icircumflex
+  dup 317 /Idieresis
+  dup 314 /Igrave
+  dup 334 /Udieresis
+  dup 335 /Yacute
+  dup 376 /thorn
+  dup 337 /germandbls
+  dup 341 /aacute
+  dup 342 /acircumflex
+  dup 344 /adieresis
+  dup 346 /ae
+  dup 340 /agrave
+  dup 345 /aring
+  dup 347 /ccedilla
+  dup 351 /eacute
+  dup 352 /ecircumflex
+  dup 353 /edieresis
+  dup 350 /egrave
+  dup 355 /iacute
+  dup 356 /icircumflex
+  dup 357 /idieresis
+  dup 354 /igrave
+  dup 360 /dcroat
+  dup 361 /ntilde
+  dup 363 /oacute
+  dup 364 /ocircumflex
+  dup 366 /odieresis
+  dup 362 /ograve
+  dup 365 /otilde
+  dup 370 /oslash
+  dup 372 /uacute
+  dup 373 /ucircumflex
+  dup 374 /udieresis
+  dup 371 /ugrave
+  dup 375 /yacute
+  dup 377 /ydieresis  
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+%%Page: 1 1
+%%PageBoundingBox: 36 36 626 786
+%%PageOrientation: Portrait
+gsave
+35 35 591 751 boxprim clip newpath
+36 36 translate
+0 0 1 beginpage
+0.1938 set_scale
+0 0 translate 0 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Courier set_font
+gsave 10 dict begin
+45.00 /Courier set_font
+1520 227 moveto 0.0 -0.5 () alignedtext
+1520 174 moveto 0.0 -0.5 () alignedtext
+1428 121 moveto
+(- MP2 -)
+[27.12 27.12 27.12 27.12 27.12 27.12 27.12]
+xshow
+1520 68 moveto 0.0 -0.5 () alignedtext
+1194 15 moveto
+(Parte da cidade de braga)
+[27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12 27.12]
+xshow
+end grestore
+
+%	node1
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+794 3828 17 17 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+794 3823 moveto 9.0 -0.5 (0) alignedtext
+end grestore
+end grestore
+
+%	node2
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+794 3633 17 17 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+794 3628 moveto 9.0 -0.5 (3) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node2
+gsave 10 dict begin
+newpath 794 3810 moveto
+794 3773 794 3688 794 3651 curveto
+stroke
+gsave 10 dict begin
+794 3732 moveto
+(Rua de Sao Vicente\(232.259995,7.450000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node3
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+598 3426 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+589 3421 moveto
+(10)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node2 -> node3
+gsave 10 dict begin
+newpath 777 3631 moveto
+738 3624 640 3602 599 3538 curveto
+582 3511 587 3473 592 3449 curveto
+stroke
+gsave 10 dict begin
+599 3525 moveto
+(Avenida da Liberdade_0\(502.209991,16.680000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node6
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1231 3426 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1222 3421 moveto
+(12)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node2 -> node6
+gsave 10 dict begin
+newpath 810 3626 moveto
+842 3612 917 3577 973 3538 curveto
+982 3531 982 3527 991 3522 curveto
+1065 3476 1165 3444 1209 3432 curveto
+stroke
+gsave 10 dict begin
+991 3525 moveto
+(Rua D. Pedro V\(1195.760010,39.860001\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node4
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+299 3219 17 17 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+299 3214 moveto 9.0 -0.5 (3) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node4
+gsave 10 dict begin
+newpath 575 3422 moveto
+513 3410 341 3374 307 3331 curveto
+286 3303 290 3260 295 3236 curveto
+stroke
+gsave 10 dict begin
+310 3318 moveto
+(Avenida da Liberdade_1\(375.640015,12.660000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node7
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+783 3219 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+774 3214 moveto
+(18)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node3 -> node7
+gsave 10 dict begin
+newpath 613 3408 moveto
+632 3386 664 3347 693 3315 curveto
+719 3287 749 3255 767 3236 curveto
+stroke
+gsave 10 dict begin
+693 3318 moveto
+(Avenida Joao XXI\(1235.300049,41.180000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node9
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1487 3219 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1478 3214 moveto
+(15)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node6 -> node9
+gsave 10 dict begin
+newpath 1254 3424 moveto
+1302 3418 1413 3399 1468 3331 curveto
+1488 3306 1490 3267 1489 3243 curveto
+stroke
+gsave 10 dict begin
+1474 3318 moveto
+(Rua Nova Santa Cruz_0\(203.559998,6.790000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node6 -> node7
+gsave 10 dict begin
+newpath 1210 3417 moveto
+1174 3402 1100 3369 1043 3331 curveto
+1035 3324 1035 3320 1025 3315 curveto
+951 3269 850 3237 805 3225 curveto
+stroke
+gsave 10 dict begin
+1049 3318 moveto
+(Avenida Padre Julio Fragata_1\(259.529999,7.950000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node19
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1304 3012 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1295 3007 moveto
+(26)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node9 -> node19
+gsave 10 dict begin
+newpath 1464 3215 moveto
+1424 3206 1341 3181 1305 3124 curveto
+1289 3097 1293 3059 1298 3035 curveto
+stroke
+gsave 10 dict begin
+1304 3111 moveto
+(Rua Nova Santa Cruz_1\(235.759995,7.860000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node10
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1680 3012 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1671 3007 moveto
+(24)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node9 -> node10
+gsave 10 dict begin
+newpath 1509 3214 moveto
+1547 3203 1624 3177 1662 3124 curveto
+1680 3097 1683 3060 1682 3035 curveto
+stroke
+gsave 10 dict begin
+1668 3111 moveto
+(Rua da Fabrica_0\(52.340000,1.750000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node18
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1728 2599 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1719 2594 moveto
+(28)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node19 -> node18
+gsave 10 dict begin
+newpath 1286 2996 moveto
+1249 2943 1274 2904 1268 2830 curveto
+1267 2808 1257 2799 1268 2782 curveto
+1372 2628 1627 2604 1705 2600 curveto
+stroke
+gsave 10 dict begin
+1271 2801 moveto
+(Rua Nova Santa Cruz_2\(327.970001,10.930000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node20
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1662 2806 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1653 2801 moveto
+(27)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node19 -> node20
+gsave 10 dict begin
+newpath 1297 2990 moveto
+1290 2965 1285 2926 1305 2901 curveto
+1396 2787 1490 2886 1625 2830 curveto
+1631 2827 1637 2824 1643 2820 curveto
+stroke
+gsave 10 dict begin
+1304 2904 moveto
+(Rua Quinta da armada\(410.000000,13.670000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node32
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1728 2392 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1719 2387 moveto
+(28)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node18 -> node32
+gsave 10 dict begin
+newpath 1728 2575 moveto
+1728 2535 1728 2456 1728 2416 curveto
+stroke
+gsave 10 dict begin
+1728 2490 moveto
+(Rua Nova Santa Cruz_3\(412.320007,13.740000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node21
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1609 2185 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1600 2180 moveto
+(29)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node32 -> node21
+gsave 10 dict begin
+newpath 1707 2383 moveto
+1676 2370 1622 2340 1599 2296 curveto
+1584 2267 1592 2230 1600 2207 curveto
+stroke
+gsave 10 dict begin
+1598 2283 moveto
+(Rua Nova Santa Cruz_4\(45.450001,1.520000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node33
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2104 2185 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+2095 2180 moveto
+(29)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node32 -> node33
+gsave 10 dict begin
+newpath 1750 2385 moveto
+1791 2371 1880 2338 1948 2296 curveto
+1957 2290 1958 2286 1967 2280 curveto
+2007 2248 2057 2215 2084 2197 curveto
+stroke
+gsave 10 dict begin
+1966 2283 moveto
+(Rua Lusiada\(47.230000,1.570000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node25
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1609 1978 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1600 1973 moveto
+(38)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node21 -> node25
+gsave 10 dict begin
+newpath 1609 2161 moveto
+1609 2121 1609 2042 1609 2002 curveto
+stroke
+gsave 10 dict begin
+1609 2076 moveto
+(Rua Nova Santa Cruz_5\(300.529999,10.010000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node22
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2362 1978 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+2353 1973 moveto
+(31)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node21 -> node22
+gsave 10 dict begin
+newpath 1632 2179 moveto
+1689 2164 1845 2124 1975 2089 curveto
+2114 2050 2280 2002 2340 1985 curveto
+stroke
+gsave 10 dict begin
+2025 2076 moveto
+(Rua David Costa_0\(26.530001,0.880000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node34
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1609 1771 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1600 1766 moveto
+(41)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node25 -> node34
+gsave 10 dict begin
+newpath 1609 1954 moveto
+1609 1914 1609 1835 1609 1795 curveto
+stroke
+gsave 10 dict begin
+1609 1869 moveto
+(Rua Vasco Ferreira\(73.239998,2.440000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node26
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1952 1771 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1943 1766 moveto
+(33)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node25 -> node26
+gsave 10 dict begin
+newpath 1632 1974 moveto
+1699 1963 1892 1928 1933 1882 curveto
+1954 1858 1956 1819 1955 1795 curveto
+stroke
+gsave 10 dict begin
+1940 1869 moveto
+(Rua Ulisses da Monhe Costa\(43.599998,1.450000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node27
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1258 1771 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1249 1766 moveto
+(35)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node25 -> node27
+gsave 10 dict begin
+newpath 1590 1964 moveto
+1585 1960 1578 1956 1572 1954 curveto
+1444 1899 1359 1986 1268 1882 curveto
+1247 1858 1249 1819 1253 1794 curveto
+stroke
+gsave 10 dict begin
+1270 1869 moveto
+(Rua Estrada Nova_0\(453.000000,15.100000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node8
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+399 3012 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+390 3007 moveto
+(54)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node7 -> node8
+gsave 10 dict begin
+newpath 760 3217 moveto
+684 3209 448 3181 402 3124 curveto
+382 3099 387 3060 392 3035 curveto
+stroke
+gsave 10 dict begin
+402 3111 moveto
+(Rua Frei Bartolomeu dos Martires\(432.450012,14.420000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node11
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+878 2806 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+869 2801 moveto
+(19)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node7 -> node11
+gsave 10 dict begin
+newpath 801 3204 moveto
+819 3186 848 3156 860 3124 curveto
+901 3020 889 2883 882 2829 curveto
+stroke
+gsave 10 dict begin
+889 3007 moveto
+(Avenida Joao Paulo II_0\(249.460007,8.320000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node5
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1325 3633 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1316 3628 moveto
+(11)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node5 -> node6
+gsave 10 dict begin
+newpath 1325 3609 moveto
+1323 3586 1319 3550 1306 3522 curveto
+1293 3490 1266 3460 1248 3442 curveto
+stroke
+gsave 10 dict begin
+1313 3525 moveto
+(Avenida Padre Julio Fragata_0\(518.109985,17.270000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node13
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+399 2806 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+390 2801 moveto
+(55)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node8 -> node13
+gsave 10 dict begin
+newpath 399 2988 moveto
+399 2948 399 2869 399 2830 curveto
+stroke
+gsave 10 dict begin
+399 2904 moveto
+(Avenida Dr Antonio Palha_0\(260.339996,8.680000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node14
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+23 2599 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+14 2594 moveto
+(15)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node13 -> node14
+gsave 10 dict begin
+newpath 376 2804 moveto
+301 2796 69 2766 24 2710 curveto
+5 2685 10 2646 16 2622 curveto
+stroke
+gsave 10 dict begin
+24 2697 moveto
+(Rua Pascoal Fernandes\(130.639999,4.350000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node12
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+821 2599 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+812 2594 moveto
+(22)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node13 -> node12
+gsave 10 dict begin
+newpath 413 2787 moveto
+432 2762 468 2719 508 2694 curveto
+606 2634 744 2610 798 2602 curveto
+stroke
+gsave 10 dict begin
+508 2697 moveto
+(Rua Antonio Maniz_0\(204.149994,6.080000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node40
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+514 736 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+505 731 moveto
+(56)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node13 -> node40
+gsave 10 dict begin
+newpath 397 2782 moveto
+395 2744 391 2665 391 2599 curveto
+391 2599 391 2599 391 943 curveto
+391 861 462 784 496 752 curveto
+stroke
+gsave 10 dict begin
+391 1766 moveto
+(Avenida Dr Antonio Palha_1\(272.190002,9.070000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node10 -> node11
+gsave 10 dict begin
+newpath 1684 2989 moveto
+1686 2963 1685 2923 1662 2901 curveto
+1633 2873 1027 2819 901 2808 curveto
+stroke
+gsave 10 dict begin
+1673 2904 moveto
+(Rua da Fabrica_1\(63.430000,2.110000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node17
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2006 2806 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1997 2801 moveto
+(27)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node10 -> node17
+gsave 10 dict begin
+newpath 1703 3008 moveto
+1767 2996 1948 2960 1987 2917 curveto
+2008 2893 2010 2854 2009 2830 curveto
+stroke
+gsave 10 dict begin
+1993 2904 moveto
+(Rua Monsenhor Ferreira_0\(275.149994,9.170000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node11 -> node12
+gsave 10 dict begin
+newpath 872 2783 moveto
+861 2743 838 2661 827 2622 curveto
+stroke
+gsave 10 dict begin
+853 2697 moveto
+(Rua da Fabrica_2\(197.080002,6.570000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node16
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1189 2185 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1180 2180 moveto
+(24)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node11 -> node16
+gsave 10 dict begin
+newpath 901 2802 moveto
+964 2790 1135 2754 1168 2710 curveto
+1287 2552 1220 2286 1196 2207 curveto
+stroke
+gsave 10 dict begin
+1237 2490 moveto
+(Avenida Joao Paulo II_1\(344.339996,11.480000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node15
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+822 2392 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+813 2387 moveto
+(50)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node12 -> node15
+gsave 10 dict begin
+newpath 821 2575 moveto
+821 2535 822 2456 822 2416 curveto
+stroke
+gsave 10 dict begin
+822 2490 moveto
+(Rua Antonio Maniz_1\(406.170013,14.260000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node16 -> node34
+gsave 10 dict begin
+newpath 1185 2161 moveto
+1176 2100 1162 1934 1256 1866 curveto
+1311 1826 1517 1787 1586 1775 curveto
+stroke
+gsave 10 dict begin
+1195 1973 moveto
+(Avenida Joao Paulo II_2\(351.540009,11.710000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node35
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2538 1564 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+2529 1559 moveto
+(40)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node34 -> node35
+gsave 10 dict begin
+newpath 1632 1770 moveto
+1637 1770 1642 1769 1647 1769 curveto
+1694 1765 2471 1706 2508 1675 curveto
+2532 1653 2538 1613 2539 1588 curveto
+stroke
+gsave 10 dict begin
+2519 1662 moveto
+(Rua do Enterro\(15.530000,0.520000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node37
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2002 1564 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1993 1559 moveto
+(41)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node34 -> node37
+gsave 10 dict begin
+newpath 1632 1768 moveto
+1705 1759 1934 1728 1983 1675 curveto
+2004 1651 2006 1612 2005 1588 curveto
+stroke
+gsave 10 dict begin
+1990 1662 moveto
+(Avenida General Carrilho da Silva Pinto\(846.359985,28.209999\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node36
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1609 1564 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1600 1559 moveto
+(44)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node34 -> node36
+gsave 10 dict begin
+newpath 1609 1747 moveto
+1609 1707 1609 1628 1609 1588 curveto
+stroke
+gsave 10 dict begin
+1609 1662 moveto
+(Estrada do Bom Jesus_0\(464.209991,15.470000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node15 -> node16
+gsave 10 dict begin
+newpath 830 2370 moveto
+840 2344 859 2303 889 2280 curveto
+976 2212 1112 2192 1166 2187 curveto
+stroke
+gsave 10 dict begin
+889 2283 moveto
+(Rua da Rodovia\(34.230000,1.140000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node39
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1256 1150 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1247 1145 moveto
+(51)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node15 -> node39
+gsave 10 dict begin
+newpath 822 2368 moveto
+822 2330 822 2251 822 2185 curveto
+822 2185 822 2185 822 1357 curveto
+822 1343 831 1341 841 1333 curveto
+991 1220 1075 1275 1231 1174 curveto
+1234 1172 1237 1169 1240 1167 curveto
+stroke
+gsave 10 dict begin
+822 1766 moveto
+(Rua Luis Antonio Correia_0\(146.139999,4.870000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node17 -> node18
+gsave 10 dict begin
+newpath 1987 2792 moveto
+1937 2755 1797 2651 1747 2613 curveto
+stroke
+gsave 10 dict begin
+1874 2697 moveto
+(Rua Kefro\(25.350000,0.850000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node17 -> node33
+gsave 10 dict begin
+newpath 2026 2794 moveto
+2052 2779 2097 2748 2122 2710 curveto
+2224 2549 2207 2484 2232 2296 curveto
+2232 2288 2235 2286 2232 2280 curveto
+2210 2235 2156 2207 2126 2193 curveto
+stroke
+gsave 10 dict begin
+2208 2490 moveto
+(Rua Monsenhor Ferreira_1\(200.100006,6.670000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node23
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2730 1771 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+2721 1766 moveto
+(31)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node22 -> node23
+gsave 10 dict begin
+newpath 2385 1975 moveto
+2455 1965 2666 1931 2711 1882 curveto
+2732 1858 2734 1819 2733 1795 curveto
+stroke
+gsave 10 dict begin
+2718 1869 moveto
+(Rua David Costa_1\(37.000000,1.250000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node24
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+2362 1771 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+2353 1766 moveto
+(32)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node22 -> node24
+gsave 10 dict begin
+newpath 2362 1954 moveto
+2362 1914 2362 1835 2362 1795 curveto
+stroke
+gsave 10 dict begin
+2361 1869 moveto
+(Rua Quinta dos Orfoes\(78.430000,2.610000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node28
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1258 1564 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1249 1559 moveto
+(35)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node27 -> node28
+gsave 10 dict begin
+newpath 1258 1747 moveto
+1258 1707 1258 1628 1258 1588 curveto
+stroke
+gsave 10 dict begin
+1258 1662 moveto
+(Rua Estrada Nova_1\(148.000000,4.930000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node29
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+907 1564 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+898 1559 moveto
+(37)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node27 -> node29
+gsave 10 dict begin
+newpath 1239 1757 moveto
+1234 1753 1227 1749 1221 1747 curveto
+1098 1693 1019 1773 926 1675 curveto
+904 1651 903 1612 904 1588 curveto
+stroke
+gsave 10 dict begin
+929 1662 moveto
+(Rua Universidade_0\(225.500000,7.520000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node31
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+873 1357 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+864 1352 moveto
+(37)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node29 -> node31
+gsave 10 dict begin
+newpath 895 1544 moveto
+885 1525 871 1495 865 1468 curveto
+859 1438 863 1403 868 1380 curveto
+stroke
+gsave 10 dict begin
+868 1455 moveto
+(Rua Universidade_1\(83.419998,2.780000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node30
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1207 1357 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1198 1352 moveto
+(38)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node29 -> node30
+gsave 10 dict begin
+newpath 930 1559 moveto
+991 1546 1155 1509 1189 1468 curveto
+1210 1443 1212 1405 1210 1380 curveto
+stroke
+gsave 10 dict begin
+1200 1455 moveto
+(Rua de Barros\(175.149994,5.830000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node41
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1884 1357 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1875 1352 moveto
+(43)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node36 -> node41
+gsave 10 dict begin
+newpath 1632 1563 moveto
+1683 1558 1804 1540 1865 1468 curveto
+1885 1443 1887 1405 1886 1380 curveto
+stroke
+gsave 10 dict begin
+1871 1455 moveto
+(Estrada do Bom Jesus_1\(2036.219971,67.879997\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node38
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1271 1357 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1262 1352 moveto
+(49)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node36 -> node38
+gsave 10 dict begin
+newpath 1594 1546 moveto
+1572 1522 1531 1479 1490 1452 curveto
+1424 1408 1334 1377 1293 1364 curveto
+stroke
+gsave 10 dict begin
+1511 1455 moveto
+(Avenida Dom Joao II_0\(74.339996,2.480000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node42
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+1884 1150 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1875 1145 moveto
+(44)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node41 -> node42
+gsave 10 dict begin
+newpath 1884 1333 moveto
+1884 1293 1884 1214 1884 1174 curveto
+stroke
+gsave 10 dict begin
+1884 1248 moveto
+(Rua da Luz\(1835.530029,61.180000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node47
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+853 943 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+844 938 moveto
+(52)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node38 -> node47
+gsave 10 dict begin
+newpath 1253 1342 moveto
+1249 1339 1244 1335 1239 1333 curveto
+1082 1242 966 1323 862 1174 curveto
+818 1110 836 1010 847 966 curveto
+stroke
+gsave 10 dict begin
+865 1145 moveto
+(Avenida Dom Joao II_1\(445.760010,14.860000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node38 -> node39
+gsave 10 dict begin
+newpath 1269 1333 moveto
+1266 1293 1260 1213 1258 1173 curveto
+stroke
+gsave 10 dict begin
+1264 1248 moveto
+(Rua Manuel Ferreira Gomes\(234.779999,7.830000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node47 -> node40
+gsave 10 dict begin
+newpath 833 931 moveto
+773 894 594 785 534 748 curveto
+stroke
+gsave 10 dict begin
+695 835 moveto
+(Avenida Dom Joao II_2\(467.750000,15.590000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node43
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+514 529 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+505 524 moveto
+(53)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node40 -> node43
+gsave 10 dict begin
+newpath 514 712 moveto
+514 672 514 593 514 553 curveto
+stroke
+gsave 10 dict begin
+514 628 moveto
+(Avenida Dom Joao II_3\(378.970001,12.630000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node46
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+129 322 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+120 317 moveto
+(49)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node43 -> node46
+gsave 10 dict begin
+newpath 491 526 moveto
+418 517 196 485 148 434 curveto
+126 410 125 371 126 346 curveto
+stroke
+gsave 10 dict begin
+151 421 moveto
+(Avenida Dom Joao II_4\(386.000000,12.890000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node45
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+514 322 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+505 317 moveto
+(53)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node43 -> node45
+gsave 10 dict begin
+newpath 514 505 moveto
+514 465 514 386 514 346 curveto
+stroke
+gsave 10 dict begin
+514 421 moveto
+(Rua da Sena\(453.429993,15.110000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node44
+gsave 10 dict begin
+filled
+0.000 0.000 0.753 nodecolor
+0.000 0.000 0.753 nodecolor
+815 322 22 23 ellipse_path
+fill
+0.000 0.000 0.753 nodecolor
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+806 317 moveto
+(54)
+[8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node43 -> node44
+gsave 10 dict begin
+newpath 537 524 moveto
+598 512 762 475 796 434 curveto
+817 409 819 371 818 346 curveto
+stroke
+gsave 10 dict begin
+807 421 moveto
+(Avenida Robert Smith\(398.750000,13.290000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+
+%	node39 -> node47
+gsave 10 dict begin
+newpath 1237 1137 moveto
+1231 1133 1225 1129 1219 1126 curveto
+1092 1052 931 978 874 952 curveto
+stroke
+gsave 10 dict begin
+1082 1041 moveto
+(Rua Luis Antonio Correia_1\(240.089996,8.000000\))
+[8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4]
+xshow
+end grestore
+end grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF

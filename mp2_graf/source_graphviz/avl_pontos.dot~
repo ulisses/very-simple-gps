@@ -1,0 +1,41 @@
+digraph g {
+	graph [ratio=expand,center=1
+		fontname="Courier"
+	];
+	node [
+		fontsize = "16"
+		sep=.05
+		shape=record,width=.1,height=.1
+		pack=false
+		fontname="Helvetica-Outline"
+		fontname="Courier"
+		];
+	ratio=fill;
+	edge [constraint=1,color=black,fontname="Courier"];
+
+	subgraph avlRotaPontos {
+		nodo1 [ label ="EB | {<f1> Cinemas Paraiso (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		nodo2 [ label ="EB | {<f1> Teatro Circo (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		nodo3 [ label ="EB | {<f1> Universidade do Minho (nomePonto) | <ptrPointes> *pontos| {<f0> Right| <f2> Left}}"];
+		
+		NULL_11_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_22_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_33_ [label="NULL",shape = "record",color=gray77,style=filled];
+		NULL_44_ [label="NULL",shape = "record",color=gray77,style=filled];
+		
+		nodo2:f0 -> nodo3:f1
+		nodo2:f2 -> nodo1:f1
+		nodo1:f0 -> NULL_11_
+		nodo1:f2 -> NULL_22_
+		nodo3:f0 -> NULL_33_
+		nodo3:f2 -> NULL_44_
+		
+		nodo1:ptrPointes -> pontos_A:[label="ponto"];
+		nodo2:ptrPointes -> pontos_A1[label="ponto"];
+		nodo3:ptrPointes -> pontos_E1[label="ponto"];
+		
+		pontos_A[label="Cinemas Paraiso info",shape="ellipse",color=gold,style=filled]
+		pontos_A1[label="Teatro Circo info",shape="ellipse",color=gold,style=filled]
+		pontos_E1[label="Universidade do Minho info",shape="ellipse",color=gold,style=filled]
+	}
+}

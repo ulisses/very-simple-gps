@@ -1,0 +1,394 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage[portuges]{minitoc}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\usepackage{listings} % permite incluir codigo de programas...
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsfonts}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{24cm}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt plus 1pt}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-1.1cm}
+\setlength{\headsep}{20pt}
+\setlength{\columnsep}{1.5pc}
+\setlength\columnseprule{.4pt}
+\setlength\premulticols{6\baselineskip}
+\pagestyle{fancy}
+
+\newcommand{\linha}{\begin{tabular}{1}\hline\end{tabular}}
+
+\definecolor{castanho_ulisses}{rgb}{0.71,0.33,0.14}
+\definecolor{gray_ulisses}{gray}{0.55}
+\definecolor{green_ulises}{rgb}{0.2,0.75,0}
+
+\lstdefinelanguage{C_ulisses}
+{
+	basicstyle=\ttfamily\scriptsize,
+	%backgroundcolor=\color{yellow},
+	%frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}, %contornos... muito nice...
+	sensitive=true,
+	morecomment=[l][\color{gray_ulisses}\scriptsize]{//},
+	morecomment=[s][\color{gray_ulisses}\scriptsize]{/*}{*/},
+	morestring=[b]",
+	morestring=[b]',
+	stringstyle=\color{red},
+	showstringspaces=false,
+% 	firstnumber=\thelstnumber,
+	numbers=left,
+	numberstyle=\tiny,
+	numberblanklines=true,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=-10pt,
+	xrightmargin=-20pt,
+	%% funcoes predefinidas...
+	emph=
+	{[1]
+		return,printf,fprintf,if,else,scanf,sscanf,sprintf,malloc,
+		calloc,realloc,fgets,fputs,puts,system,strcmp,strstr,
+		strchr,exit,for,while,fclose,fopen,atoi,sizeof,sin,cos
+		%% e muitos mais que a medida que sejam necessrios irei adicionar...
+	},
+	emphstyle={[1]\color{blue}\textbf},
+	%% tipos de dados e nao so... >mais enph's<;
+	emph={[2]char,float,double,void,NULL,int,bool},
+	emphstyle={[2]\color{green_ulises}\textbf},
+	emph={[3]typedef, struct},
+	emphstyle={[3]\color{castanho_ulisses}\textbf}
+}
+
+\lstdefinelanguage{algoritmo_ulisses}
+{
+       basicstyle=\ttfamily\scriptsize,
+       morecomment=[l][\color{gray_ulisses}\scriptsize]{//},
+       morecomment=[s][\color{gray_ulisses}\scriptsize]{/*}{*/},
+       sensitive=true,
+       showstringspaces=false,
+       numbers=left,
+       numberstyle=\tiny,
+       numberblanklines=true,
+       showspaces=false,
+       tab=\rightarrowfill,
+       showtabs=true
+}
+
+\lstdefinelanguage{texto_ulisses}
+{
+       basicstyle=\ttfamily\scriptsize,
+       showstringspaces=false,
+       numbers=left,
+       numberstyle=\tiny,
+       numberblanklines=true,
+       showspaces=false,
+       showtabs=false
+}
+
+%% stuff do minitoc %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secttocdepth}{10}
+\setlength{\stcindent}{24pt}
+\renewcommand{\stcfont}{\small\rm}
+\renewcommand{\stcSSfont}{\small\bf}
+%\newenvironment{mtc}{\secttoc\sectlof\sectlot}{\pagebreak}
+%                        ^       ^        ^
+%                    conteudos  figuras  tabelas
+\newenvironment{mtc}{\secttoc\sectlof}{\pagebreak}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\sf  M�todos de Programa��o II \\
+\begin{tabular}{c}
+	\includegraphics[width=.1\textwidth]{stuff/uminho.jpg}
+	\includegraphics[width=.07\textwidth]{stuff/informatica.jpg}\\
+	{\small Universidade do Minho}, {\small LESI}\\
+	{\small Ano lectivo 2006/2007}\\
+	{\small Trabalho Pr�tico N$�$1}\\
+\end{tabular}
+}
+\author{
+	{\small David Louren�o da Costa - 43110} \and
+	{\small M�rio Ulisses Pires Araujo Costa - 43175} \and
+	{\small Vasco Almeida Ferreira - 43207}}
+\date{{\small \today}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este trabalho foi implementado no paradigma imperativo, em liguagem C.\\
+O objectivo � conceber uma aplica\c c\~ao com o intuito de apoiar os visitantes, na sua orienta��o, dentro de uma localidade.\\
+\end{abstract}
+
+\pagebreak
+\dosecttoc
+\dosectlof
+\doparttoc
+\dopartlof
+\tableofcontents
+\listoffigures
+\pagebreak
+
+\section{Introdu\c c\~ao}
+\addtocounter{stc}{0} % este 0 tem que ser alterado conforme o que se desejar...
+Este trabalho foi realizado no \^ambito da disciplina de M�todos da Programa\c c\~ ao II, da Licenciatura em Engenharia de Sistemas e Inform\'atica da Universidade do Minho.\\
+O objectivo \'e construir um sistema de apoio aos visitantes de uma localidade, que tenha por base o armazenamento do mapa da localidade
+e dos locais de interesse para o visitante.\\
+
+Este relat\'orio contem as diferentes fases do desenvolvimento do programa, a saber: an\'alise do problema, escolha/descoberta do
+algoritmo, implementa\c c\~ao, testes e documenta\c c\~ao.
+
+\section{An\'alise e Especifica\c c\~ao}
+\begin{mtc}
+\subsection{Descri\c c\~ao informal do problema}
+Partindo do que nos foi indicado pelo enunciado, Pretende-se construir um sistema de apoio aos visitantes de uma localidade, que tenha por
+base o armazenamento do mapa da localidade e dos locais de interesse para o visitante,
+e que d� resposta �s quest�es normalmente colocadas pelos visitantes, como por exemplo:
+\begin{itemize}
+ \item indicar percursos tur�sticos,
+ \item indicar o melhor caminho para chegar a um dado local,
+ \item indicar os restaurantes mais pr�ximos,
+ \item etc.
+\end{itemize}
+
+\subsection{Especifica\c c\~ao dos Requisitos}
+Para levar a cabo este trabalho, foram necess\'arios conhecimentos da linguagem \textsf{C}, conhecimento do algoritmo de
+\textsf{Dijkstra} e do \textsf{Breadth-first} (pesquisa em largura), assim como o dom\'inio de \textsf{Graphviz} para gerar imagens dos 
+grafos e de {\LaTeXe} e alguns dos seus pacotes para elaborar este relat\'orio.
+\\
+\subsubsection{Dados}
+Como os visitantes se v�o deslocar unicamentea p�, o mapa da localidade � representado por um grafo n�o orientado, dado que os pe�es 
+podem sempre circular nas ruas, nos dois sentidos.\\
+
+\begin{figure}[!htb]\label{grafo_nao_orientado}
+    \centering
+        \includegraphics[width=.5\textwidth]{stuff/grafo_nao_orientado.png}
+    \caption{Grafo n�o orientado}
+\end{figure}
+
+\subsubsection{Pedidos}
+Foi-nos pedido a cria\c c\~ao de uma aplica\c c\~ao que deva suportar uma s\'erie de opera\c c\~oes de pesquisa sobre a infrma��o
+guardada, com a finalidade do utilizador se orientar numa determinada localidade.
+\\
+Listam-se a seguir, com maior detalhe, essas opera\c c\~oes desejadas:
+
+\begin{itemize}
+    \item Dados um ponto (cruzamento) de partida e um ponto de chegada, indicar:
+        \begin{itemize}
+            \item o percurso mais curto, a sua dist�ncia e o tempo que demora a percorrer a p�;
+            \item o percurso que passa por melhores zonas de com�rcio, sem que se exceda uma dada dist�ncia de percurso;
+            \item o percurso mais r�pido para chegar a um dado local (monumento, restaurante, hotel, etc);
+            \item o percurso de maior valor arquitect�nico, hist�rico e paisag�stico, sem que o acr�scimo de dist�ncia exceda os x\% do caminho mais curto.
+        \end{itemize}
+    \item O percurso de maior valor arquitect�nico, para gastar x minutos a caminhar a partir de um dado ponto e com regresso ao ponto de partida.
+    \item Dado um ponto (cruzamento) saber:
+        \begin{itemize}
+         \item num raio de $x$ metros, quais os locais de interesse tur�stico que poderemos encontrar;
+         \item quais os $n$ restaurantes mais pr�ximos e as respectivas dist�ncias.
+        \end{itemize}
+    \item Dados $n$ pontos (cruzamentos), determinar um percurso (mais curto?) que passa por esses pontos, preferencialmente apenas uma vez.
+    \item Saber informa��o sobre um dado local (monumento, restaurante, \ldots)
+    \item Saber qual o comprimento total de uma rua (que pode ser constitu�da por v�rios tro�os).
+    \item Definir fun��es de leitura e escrita da informa��o em ficheiro.
+\end{itemize}
+\end{mtc}
+
+\section{Concep\c c\~ao/Desenho da Resolu\c c\~ao}
+\begin{mtc}
+\subsection{Estruturas de Dados}
+Afim de optimizar os tempos de resposta a quest�es, colocadas pelos utilizadores, do nosso programa optamos por estruturas
+de dados que nos facilitassem a pesquisa de informa��o.
+\\
+
+Assim sendo implementamos uma \textsf{HashMap}, a qual ter� os n�meros dos cruzamentos da localidade (�ndice) associando cada cruzamento
+a uma listas ligada de arestas adjacentes.
+Podendo assim aceder por indice a cada momento que pretendemos saber por exemplo
+as arestas adjacentes de um determinado v�rtice.
+\\
+
+\begin{figure}[!htb]\label{grafo1}
+    \centering
+        \includegraphics[width=.2\textwidth,angle=270]{stuff/grafo_memoria.png}
+    \caption{Grafo que liga as ruas $a$, $b$, $c$, $d$, $e$, $f$, $g$}
+\end{figure}
+
+O nosso grafo fica assim, simplesmente, a ser um apontador para esse array de listas ligadas\ldots
+\\
+
+Estrutura que representa o grafo em \textsf{C}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_grafo}
+
+\begin{figure}[!htb]\label{grafo_memoria}
+    \centering
+        \includegraphics[width=.9\textwidth]{stuff/grafo_memoria_rel.png}
+    \caption{Representa��o do grafo em mem�ria}
+\end{figure}
+
+Cada nodo da lista ligada que sai de cada nodo da \textsf{HashMap} tem um apontador para a informa��o de uma rua.
+\\
+
+Informa��o esta que pretendemos partilhar entre outras estruturas, por forma a poder obter por varios caminho, como j� vamos
+ver mais adiante...
+\\
+
+\begin{figure}[!htb]\label{grafo_memoria_full}
+    \centering
+        \includegraphics[width=.9\textwidth]{stuff/grafo_memoria_rel_full.png}
+    \caption{Representa��o do grafo em mem�ria, mais ruas}
+\end{figure}
+
+Decidimos que uma rua seria limitada por dois vertices e que teria:
+\begin{itemize}
+ \item um nome,
+ \item limite1, que se trata de um dos vertices limite,
+ \item limite2, que se trata do outro vertice limite,
+ \item tamanho,
+ \item tempo qeu se demora a percorrer em m�dia essa rua,
+ \item valores, que sao obtidos atrav�s das somas de cada tipo de valor dos ponstos de interesse dessa rua:
+ \begin{itemize}
+  \item Historico,
+  \item Comercial,
+  \item Paisagistico,
+  \item Arquitect�nico
+ \end{itemize}
+\end{itemize}
+
+\begin{figure}[!ht]\label{rua}
+    \centering
+        \includegraphics[width=1\textwidth]{stuff/rua.png}
+    \caption{Representa��o da informa��o das ruas e pontos de interesse em mem�ria}
+\end{figure}
+
+Esta estrutura \textit{rua} ser�, em conjunto com a informa��o sobre um dado ponto de interesse, a informa��o partilhada
+entre mais algumas estruturas que veremos adiante\ldots
+
+Estrutura que guarda a informa��o sobre cada rua em \textsf{C}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_rua.tex}
+
+Decidimos que um ponto de interesse seria uma lista ligada e em cada nodo teria a informa��o referente a esse mesmo ponto.\\
+
+Fizemos esta decis�o porque queremos em cada rua ter todos os pontos de interesse que se encontram nela.
+
+Temos assim a seguinte informa��o na estrutura de pontos:
+\begin{itemize}
+ \item um nome do ponto de interesse em quest�o,
+ \item uma breve descri��o do ponto de interesse,
+ \item se � ou nao um ponto tur�stico,
+ \item o tipo de ponto de interesse,
+ \item valores:
+ \begin{itemize}
+  \item Historico,
+  \item Comercial,
+  \item Paisagistico,
+  \item Arquitect�nico
+ \end{itemize}
+ \item limite1, que se trata de um dos limites da rua na qual esse ponto se encontra,
+ \item distancia do ponto de interesse at� ao limite1,
+ \item tempo qeu se demora a percorrer em m�dia desse ponto ate ao limite1,
+\end{itemize}
+
+Por motivos de efici�ncia precisamos ainda de um apontador para a rua na qual esse ponto se encontra.\\
+
+Ficamos assim com a seguinte estrutura que guarda a informa��o sobre os pontos de interesse de uma dada rua em \textsf{C}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_ponto.tex}
+
+Em \textsf{C} classificamos os tipos dos pontos de interesse com a seguinte \textbf{enum}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_tipo.tex}
+
+Para que um ponto de interesse ser considerado como \textit{ponto tur�stico} dever� ser de um dos seguintes tipos:
+\begin{enumerate}
+ \item Igreja,
+ \item Teatro,
+ \item PontoTurismo,
+ \item Museu,
+ \item Monumento
+\end{enumerate}
+
+Como vamos pretender fazer muitas pesquisas sobre ruas, decidimos implementar uma �rvore \textsf{AVL} ordenada pelo nome das ruas,
+afim de facilitar a sua pesquisa.
+
+Dos nodos desta �rvore \textsf{AVL} sair� uma lista ligada de apontadores para ruas, com o intuito de guardar todos os tro�os
+das ruas que s�o ``cortadas'' por uma ou v�rias ruas.
+
+\begin{figure}[!ht]\label{avl_ruas}
+    \centering
+        \includegraphics[width=1\textwidth]{stuff/avl_ruas.png}
+    \caption{Representa��o da �rvore \textsf{AVL} de ruas em mem�ria}
+\end{figure}
+
+Temos assim a seguinte estrutura em \textsf{C}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_avl_ruas.tex}
+
+\begin{figure}[!ht]\label{avl_ruas_full}
+    \centering
+        \includegraphics[width=1\textwidth]{stuff/avl_ruas_full.png}
+    \caption{Representa��o da �rvore \textsf{AVL} de ruas, com os seues tro�os, em mem�ria}
+\end{figure}
+
+Pelo mesmo motivo de rapidez decidimos implementar tamb�m uma �rvore \textsf{AVL} para os pontos de interesse.
+
+Nos nodos temos o nome do ponto de interesse em quest�o e ainda um apontador para essa mesma estrutura.
+\begin{figure}[!ht]\label{avl_pontos}
+    \centering
+        \includegraphics[width=1\textwidth]{stuff/avl_pontos.png}
+    \caption{Representa��o da �rvore \textsf{AVL} de pontos de interesse em mem�ria}
+\end{figure}
+
+Temos assim a seguinte estrutura em \textsf{C}:
+\lstset{language=C_ulisses}
+\lstinputlisting[xleftmargin=0pt,xrightmargin=-10pt,frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}]{stuff/struct_avl_pontos.tex}
+\end{mtc}
+
+\section{Codifica\c c\~ ao e Testes}
+\begin{mtc}
+\subsection{Algoritmos e complexidade}
+O algoritmos usado para resolver para resolver a maioria das quet�es foi o algor�tmo de \textsf{Dikstra}.
+
+Para guardar os pesos dos arcos decidimos usar uma \textit{Heap}, obtendo assim um melhor tempo de execu�ao para grafos
+n�o muito densos, que � o caso de um grafo que representa uma localidade.
+\\
+Mostra-se asseguir a complexidade deste algor�tmo.
+\\
+\begin{displaymath}
+ \Theta = E\textrm{\space}log\textrm{\space}V
+\end{displaymath}
+
+\end{mtc}
+\section{Conclus\~ao}
+Este trabalho serviu para cimentar os nossos conhecimentos adquiridos durante as aulas de \textsf{MP2}, bem como
+aprender a trabalhar com estruturas de dados complexas.
+\\
+Serviu ainda para aprender algoritmos muito eficientes.
+
+\pagebreak
+\appendix
+\section{Imagens exemplo}
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=1.7\textwidth,angle=90]{stuff/apresentacao/memoria.pdf}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=1\textwidth]{stuff/apresentacao/grafo_memoria.pdf}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=1.2\textwidth]{stuff/grafo.pdf}
+\end{figure}
+\end{document}

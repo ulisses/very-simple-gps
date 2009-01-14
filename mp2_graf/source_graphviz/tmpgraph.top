@@ -1,0 +1,7 @@
+% tmpgraph.top
+\unprotect
+\setupoutput[dvips]
+\setupsystem[\c!directory={/home/ulisses/}]
+\setupsystem[\c!n=3]
+\setupsystem[inputfile=tmpgraph.tex]
+\protect
